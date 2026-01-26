@@ -10,8 +10,5 @@
         };
       };
     };
-    treesitter-refactor = {
-      enable = true;
-    };
   };
 }
