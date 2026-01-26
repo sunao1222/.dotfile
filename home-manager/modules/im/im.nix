@@ -20,12 +20,6 @@
             };
           };
           "globalOptions" = {
-            "Hotkey/ActivateKeys" = {
-              "0" = "Henkan";
-            };
-            "Hotkey/DeactivateKeys" = {
-              "0" = "Muhenkan";
-            };
             "Behavior" = {
               # デフォルトで有効にする
               "ActiveByDefault" = "False";
