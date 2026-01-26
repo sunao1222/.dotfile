@@ -12,7 +12,7 @@
             };
             "Groups/0" = {
               "Name" = "Default";
-              "Default Layout" = "jp";
+              "Default Layout" = "us";
               "DefaultIM" = "skk";
             };
             "Groups/0/Items/0" = {
@@ -76,7 +76,7 @@
             skk = {
               globalSection = {
                 "Rule" = "default";
-                "PunctuationStyle" = "Japanese";
+                "PunctuationStyle" = "English";
                 "InitialInputMode" = "Latin";
                 "PageSize" = "7";
                 "Candidate Layout" = "Vertical";
