@@ -109,4 +109,7 @@
       };
     };
   };
+  home.packages = [
+    pkgs.skktools
+  ];
 }
