@@ -33,12 +33,12 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     walker = {
-      url = "github:abenz1267/walker/v2.11.1";
+      url = "github:abenz1267/walker/v2.14.1";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.elephant.follows = "elephant";
     };
     elephant = {
-      url = "github:abenz1267/elephant/v2.16.0";
+      url = "github:abenz1267/elephant/v2.19.1";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     awww = {
