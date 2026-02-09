@@ -85,7 +85,7 @@ in {
       package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "adwaita";
+      name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
     };
   };
