@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, ...}:
+
+{
   i18n = {
     inputMethod = {
       enable = true;
@@ -94,9 +96,11 @@
                 };
                 "CursorUp" = {
                   "0" = "Up";
+                  "1" = "Control+P";
                 };
                 "CursorDown" = {
                   "0" = "Down";
+                  "1" = "Control+N";
                 };
               };
             };
