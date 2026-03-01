@@ -79,6 +79,8 @@
         };
         modules = [
           ./nixos/configuration.nix
+          ./nixos/modules/tftpd.nix
+          ./nixos/modules/flatpak.nix
         ];
       };
     };

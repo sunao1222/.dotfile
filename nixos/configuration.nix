@@ -7,7 +7,6 @@
   imports = [ 
     ./hardware-configuration.nix
     inputs.xremap.nixosModules.default
-    inputs.nix-flatpak.nixosModules.nix-flatpak
   ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -116,28 +115,6 @@
         # }
       ];
     };
-  };
-
-  services.flatpak = {
-    enable = true;
-    update = {
-      onActivation = true;
-      auto = {
-        enable = true;
-        onCalendar = "weekly";
-      };
-    };
-    overrides = {
-      global = {
-        Context.filesystems = [ "/nix/store:ro" ];
-        Environment = {
-          GTK_THEME = "Tokyonight-Dark";
-        };
-      };
-    };
-    packages = [
-      "com.discordapp.Discord"
-    ];
   };
 
   security.polkit = {
@@ -284,7 +261,7 @@
     pkgs.xdg-desktop-portal
     pkgs.xdg-desktop-portal-gnome
     pkgs.xwayland-satellite
-    pkgs.vbam
+    # pkgs.vbam
   ];
 
   users.groups.wireshark = {
@@ -339,7 +316,7 @@
     # tailscaleの仮想NICを信頼する
     # `<Tailscaleのホスト名>:<ポート番号>`のアクセスが可能になる
     trustedInterfaces = ["tailscale0"];
-    allowedUDPPorts = [config.services.tailscale.port];
+    allowedUDPPorts = [ config.services.tailscale.port ];
     checkReversePath = "loose";
   };
 
@@ -476,7 +453,7 @@
     tlp = {
       enable = true;
       settings = {
-        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_AC = "ondemand";
         CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
         PLATFORM_PROFILE_ON_AC = "balanced";
         PLATFORM_PROFILE_ON_BAT = "low-power";
