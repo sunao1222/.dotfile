@@ -1,16 +1,28 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-{ inputs, config, lib, pkgs, spkgs, username, ... }:
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  spkgs,
+  username,
+  ...
+}:
 
 {
-  imports = [ 
+  imports = [
     ./hardware-configuration.nix
     inputs.xremap.nixosModules.default
   ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.kernel.sysctl = {
+    "net.ipv4.ip_unprivileged_port_start" = "1006";
+  };
 
   hardware = {
     bluetooth = {
@@ -31,7 +43,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   networking.networkmanager = {
-    enable = true;  # Easiest to use and most distros use this by default.
+    enable = true; # Easiest to use and most distros use this by default.
     wifi = {
       # backend = "iwd";
       powersave = true;
@@ -129,7 +141,7 @@
     #   driver = pkgs.libfprint-2-tod1-goodix;
     # };
   };
-  
+
   services.tor = {
     enable = true;
     client.enable = true;
@@ -181,10 +193,19 @@
     fontDir.enable = true;
     fontconfig = {
       defaultFonts = {
-        serif = ["Noto Serif CJK JP" "Twemoji Color Emoji"];
-        sansSerif = ["Noto Sans CJK JP" "Twemoji Clolor Emoji"];
-        monospace = ["JetBrainMono Nerd Font" "Twemoji Color Emoji"];
-        emoji = ["Twemoji Color Emoji"];
+        serif = [
+          "Noto Serif CJK JP"
+          "Twemoji Color Emoji"
+        ];
+        sansSerif = [
+          "Noto Sans CJK JP"
+          "Twemoji Clolor Emoji"
+        ];
+        monospace = [
+          "JetBrainMono Nerd Font"
+          "Twemoji Color Emoji"
+        ];
+        emoji = [ "Twemoji Color Emoji" ];
       };
     };
   };
@@ -192,17 +213,20 @@
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
+    #   useXkbConfig = true; # use xkb.options in tty.
   };
 
   services = {
-    displayManager.sddm.enable = true;
-    # desktopManager.plasma6.enable = true;
-    xserver = {
+    displayManager.sddm = {
       enable = true;
-      xkb.layout = "us";
-      xkb.model = "us";
+      wayland.enable = true;
     };
+    #   desktopManager.plasma6.enable = true;
+    #   xserver = {
+    #     enable = true;
+    #     xkb.layout = "us";
+    #     xkb.model = "pc104";
+    #   };
   };
 
   # Configure keymap in X11
@@ -237,6 +261,7 @@
       # pkgs.discord
       pkgs.remmina
       # pkgs.zoom-us
+      pkgs.gns3-gui
     ];
   };
 
@@ -254,6 +279,7 @@
     pkgs.libimobiledevice
     pkgs.nyx
     # pkgs.rnnoise-plugin
+    pkgs.rpi-imager
     pkgs.virt-manager
     # pkgs.wayland-protocols
     pkgs.wget
@@ -300,7 +326,7 @@
     };
     waydroid = {
       enable = true;
-      package = pkgs.waydroid-nftables; 
+      package = pkgs.waydroid-nftables;
     };
   };
 
@@ -315,7 +341,7 @@
     enable = true;
     # tailscaleの仮想NICを信頼する
     # `<Tailscaleのホスト名>:<ポート番号>`のアクセスが可能になる
-    trustedInterfaces = ["tailscale0"];
+    trustedInterfaces = [ "tailscale0" ];
     allowedUDPPorts = [ config.services.tailscale.port ];
     checkReversePath = "loose";
   };
@@ -391,11 +417,11 @@
   # programs.dconf.enable = true;
 
   environment.sessionVariables = {
-  #   # Waylandを優先
-  #   MOZ_ENABLE_WAYLAND = "1";
-    NIXOS_OZONE_WL = "1";  # Electronアプリのためのオゾンバックエンド
-  #   
-  #   # IMEの設定
+    #   # Waylandを優先
+    #   MOZ_ENABLE_WAYLAND = "1";
+    NIXOS_OZONE_WL = "1"; # Electronアプリのためのオゾンバックエンド
+    #
+    #   # IMEの設定
     # GTK_IM_MODULE = "wayland";  # または "ibus"
     # QT_IM_MODULE = "wayland";   # または "ibus"
     # xwayland用
@@ -467,7 +493,10 @@
 
   nix = {
     settings = {
-      experimental-features = ["nix-command" "flakes"];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
     gc = {
       automatic = true;
@@ -476,4 +505,3 @@
     };
   };
 }
-
