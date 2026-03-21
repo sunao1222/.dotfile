@@ -8,14 +8,18 @@
   programs.home-manager.enable = true;
 
   home.packages = [
+    pkgs.anytype
     pkgs.blender
+    pkgs.brightnessctl
     pkgs.calcurse
+    pkgs.feishin
     pkgs.freecad-wayland
     pkgs.gemini-cli
-    pkgs.gns3-gui
+    pkgs.glide-media-player
     pkgs.grimblast
     pkgs.image-roll
     pkgs.impala
+    pkgs.mpv
     pkgs.mysql-workbench
     pkgs.nmgui
     pkgs.orca-slicer
@@ -29,9 +33,9 @@
     pkgs.termusic
     pkgs.waydroid-helper
     pkgs.zathura
-    spkgs.drawio
-    spkgs.kicad
-    spkgs.parsec-bin
+    pkgs.drawio
+    pkgs.kicad
+    pkgs.parsec-bin
   ];
 
   home.sessionVariables = {

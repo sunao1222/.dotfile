@@ -1,4 +1,5 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   fall-vim = pkgs.vimUtils.buildVimPlugin {
     name = "fall-vim";
     src = pkgs.fetchFromGitHub {
@@ -8,7 +9,8 @@
       sha256 = "";
     };
   };
-in {
+in
+{
   programs.nixvim = {
     extraPlugins = [
       fall-vim

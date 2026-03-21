@@ -319,13 +319,15 @@ animations {
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
+// window-rule {
+//     // This regular expression is intentionally made as specific as possible,
+//     // since this is the default config, and we want no false positives.
+//     // You can get away with just app-id="wezterm" if you want.
+//     match app-id=r#"^org\.wezfurlong\.wezterm$"#
+//     open-floating true
+//     // default-column-width { fixed 1727; }
+//     // default-window-height { fixed 1040; }
+// }
 
 window-rule {
     // This app-id regular expression will work for both:
@@ -336,6 +338,8 @@ window-rule {
     match title=r#"Network Manager$"#
     match app-id=r#"Nautilus$"# title="^Open Files$"
     match app-id=r#"ImageRoll$"#
+    // match app-id=r#"PacketTracer"#
+    match title=r#"mpv"#
     open-floating true
 }
 

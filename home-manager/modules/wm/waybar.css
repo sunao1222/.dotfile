@@ -20,6 +20,7 @@ button {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
+    color: white;
 }
 
 #workspaces button:hover {
@@ -53,10 +54,16 @@ button {
 
 #custom-notification,
 #pulseaudio,
+#cava,
 #network,
 #battery {
-    padding: 0 10px;
-    border-radius: 2.5px;
+  padding: 0 10px;
+  border-radius: 2.5px;
+}
+
+#cava {
+  padding: 0 0 0 10px;
+  letter-spacing: 1px;
 }
 
 #custom-notification:hover,

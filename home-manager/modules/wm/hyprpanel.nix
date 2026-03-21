@@ -2,7 +2,7 @@
   bar.launcher = {
     autoDetectIcon = true;
   };
-  scalingPriority =  "hyprland";
+  scalingPriority = "hyprland";
   theme = {
     bar = {
       menus = {
@@ -27,7 +27,7 @@
             no_notifications_label = "#444a73";
             label = "#4fd6be";
           };
-          
+
           power = {
             buttons = {
               sleep = {
@@ -59,7 +59,7 @@
             background.color = "#1e2030";
             card.color = "#2a283e";
           };
-          
+
           dashboard = {
             monitors = {
               disk = {
@@ -84,7 +84,7 @@
               };
               bar_background = "#444a73";
             };
-            
+
             directories = {
               right = {
                 bottom.color = "#c099ff";
@@ -97,7 +97,7 @@
                 top.color = "#ff757f";
               };
             };
-            
+
             controls = {
               input = {
                 text = "#222436";
@@ -121,13 +121,13 @@
               };
               disabled = "#444a73";
             };
-            
+
             shortcuts = {
               recording = "#c3e88d";
               text = "#222436";
               background = "#c099ff";
             };
-            
+
             powermenu = {
               confirmation = {
                 button_text = "#222436";
@@ -144,13 +144,13 @@
               restart = "#ffc777";
               shutdown = "#ff757f";
             };
-            
+
             profile.name = "#ff757f";
             border.color = "#2f324d";
             background.color = "#1e2030";
             card.color = "#24283b";
           };
-          
+
           clock = {
             weather = {
               hourly = {
@@ -187,7 +187,7 @@
             background.color = "#1e2030";
             card.color = "#24283b";
           };
-          
+
           battery = {
             slider = {
               puck = "#636da6";
@@ -209,7 +209,7 @@
             background.color = "#1e2030";
             card.color = "#24283b";
           };
-          
+
           systray = {
             dropdownmenu = {
               divider = "#24283b";
@@ -217,7 +217,7 @@
               background = "#222436";
             };
           };
-          
+
           bluetooth = {
             iconbutton = {
               active = "#86e1fc";
@@ -245,7 +245,7 @@
             card.color = "#24283b";
             scroller.color = "#86e1fc";
           };
-          
+
           network = {
             iconbuttons = {
               active = "#c099ff";
@@ -272,7 +272,7 @@
             card.color = "#24283b";
             scroller.color = "#c099ff";
           };
-          
+
           volume = {
             input_slider = {
               puck = "#444a73";
@@ -304,7 +304,7 @@
             background.color = "#1e2030";
             card.color = "#24283b";
           };
-          
+
           media = {
             slider = {
               puck = "#636da6";
@@ -327,69 +327,69 @@
             timestamp = "#c8d3f5";
           };
         };
-        
+
         tooltip = {
           text = "#c8d3f5";
           background = "#222436";
         };
-        
+
         dropdownmenu = {
           divider = "#24283b";
           text = "#c8d3f5";
           background = "#222436";
         };
-        
+
         slider = {
           puck = "#636da6";
           backgroundhover = "#444a73";
           background = "#636da6";
           primary = "#c099ff";
         };
-        
+
         progressbar = {
           background = "#444a73";
           foreground = "#c099ff";
         };
-        
+
         iconbuttons = {
           active = "#c099ff";
           passive = "#c8d3f5";
         };
-        
+
         buttons = {
           text = "#222436";
           disabled = "#636da6";
           active = "#ff757f";
           default = "#c099ff";
         };
-        
+
         check_radio_button = {
           active = "#c099ff";
           background = "#3b4261";
         };
-        
+
         switch = {
           puck = "#636da6";
           disabled = "#636da6";
           enabled = "#c099ff";
         };
-        
+
         icons = {
           active = "#c099ff";
           passive = "#444a73";
         };
-        
+
         listitems = {
           active = "#c099ff";
           passive = "#c8d3f5";
         };
-        
+
         popover = {
           border = "#222436";
           background = "#222436";
           text = "#c099ff";
         };
-        
+
         label = "#c099ff";
         feinttext = "#444a73";
         dimtext = "#444a73";
@@ -398,7 +398,7 @@
         cards = "#24283b";
         background = "#222436";
       };
-      
+
       buttons = {
         modules = {
           power = {
@@ -506,7 +506,7 @@
             border = "#fca7ea";
           };
         };
-        
+
         notifications = {
           total = "#4fd6be";
           icon_background = "#4fd6be";
@@ -515,7 +515,7 @@
           border = "#4fd6be";
           hover = "#504945";
         };
-        
+
         clock = {
           icon_background = "#fca7ea";
           icon = "#fca7ea";
@@ -524,7 +524,7 @@
           border = "#fca7ea";
           hover = "#504945";
         };
-        
+
         battery = {
           icon_background = "#ffc777";
           icon = "#ffc777";
@@ -533,14 +533,14 @@
           border = "#ffc777";
           hover = "#504945";
         };
-        
+
         systray = {
           background = "#272a3d";
           border = "#444a73";
           customIcon = "#c8d3f5";
           hover = "#504945";
         };
-        
+
         bluetooth = {
           icon_background = "#86e1fc";
           icon = "#86e1fc";
@@ -549,7 +549,7 @@
           border = "#86e1fc";
           hover = "#504945";
         };
-        
+
         network = {
           icon_background = "#c099ff";
           icon = "#c099ff";
@@ -558,7 +558,7 @@
           border = "#c099ff";
           hover = "#504945";
         };
-        
+
         volume = {
           icon_background = "#ff757f";
           icon = "#ff757f";
@@ -572,7 +572,7 @@
           input_text = "#eba0ac";
           separator = "#45475a";
         };
-        
+
         media = {
           icon_background = "#c099ff";
           icon = "#c099ff";
@@ -581,7 +581,7 @@
           border = "#c099ff";
           hover = "#504945";
         };
-        
+
         windowtitle = {
           icon_background = "#ff757f";
           icon = "#ff757f";
@@ -590,7 +590,7 @@
           border = "#ff757f";
           hover = "#504945";
         };
-        
+
         workspaces = {
           numbered_active_underline_color = "#c678dd";
           numbered_active_highlighted_text_color = "#181825";
@@ -602,14 +602,14 @@
           background = "#272a3d";
           border = "#ff757f";
         };
-        
+
         dashboard = {
           icon = "#272a3d";
           background = "#ffc777";
           border = "#ffc777";
           hover = "#504945";
         };
-        
+
         icon = "#242438";
         text = "#c099ff";
         hover = "#444a73";
@@ -618,11 +618,11 @@
         style = "default";
         borderColor = "#c099ff";
       };
-      
+
       background = "#222436";
       border.color = "#c099ff";
     };
-    
+
     osd = {
       label = "#c099ff";
       icon = "#222436";
@@ -633,7 +633,7 @@
       bar_container = "#1e2030";
       border.color = "#8ff0a4";
     };
-    
+
     notification = {
       close_button = {
         label = "#222436";

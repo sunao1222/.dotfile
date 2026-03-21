@@ -1,7 +1,10 @@
 {
   programs.nixvim = {
     clipboard = {
-      register = [ "unnamed" "unnamedplus" ];
+      register = [
+        "unnamed"
+        "unnamedplus"
+      ];
       providers.wl-copy = {
         enable = true;
       };

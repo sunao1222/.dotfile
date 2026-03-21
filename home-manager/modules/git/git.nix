@@ -1,4 +1,5 @@
-{pkgs, ... }: let
+{ pkgs, ... }:
+let
   codegpt = pkgs.buildGoModule {
     pname = "codegpt";
     version = "1.2.1";
@@ -14,7 +15,36 @@
 
     vendorHash = "sha256-sihfhavfPoha8tiiV7+icPYEZkp7ZRx1wgJCYiQvJeI=";
   };
-in {
+  czg = pkgs.stdenv.mkDerivation (finalAttrs: {
+    pname = "czg";
+    version = "1.12.0";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "Zhengqbbb";
+      repo = "cz-git";
+      tag = "v1.12.0";
+      hash = "sha256-8qYZ9Dc35AsfW4k6c0JNap2G9uLBY8Uw/TXqzo9GnoI=";
+    };
+
+    nativeBuildInputs = [
+      pkgs.nodejs
+      pkgs.pnpm.configHook
+    ];
+
+    pnpmDeps = pkgs.pnpm.fetchDeps {
+      inherit (finalAttrs) pname version src;
+      # sourceRoot = "${finalAttrs.src.name}/packages/cli";
+      fetcherVersion = 2;
+      hash = "sha256-wdXuKjsx3rAiftOHCYvpl3uQDFrJwAyzTm0t+30UeLM=";
+    };
+    # pnpmRoot = "cli";
+
+    installPhase = ''
+      mkdir $out
+    '';
+  });
+in
+{
 
   programs = {
     git = {
@@ -55,6 +85,7 @@ in {
 
   home.packages = [
     codegpt
+    czg
   ];
 
   home.shellAliases = {

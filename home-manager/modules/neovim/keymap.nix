@@ -4,8 +4,7 @@
       mapleader = " ";
       maplocalleader = " ";
     };
-    keymaps =
-    [
+    keymaps = [
       {
         action = "<esc>";
         key = "jk";

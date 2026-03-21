@@ -1,6 +1,7 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
 
-  programs.nixvim  = {
+  programs.nixvim = {
     plugins = {
       alpha = {
         enable = true;

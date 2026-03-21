@@ -1,4 +1,5 @@
-{pkgs, spkgs, ...}: let
+{ pkgs, spkgs, ... }:
+let
 
   ddc-vim = pkgs.vimUtils.buildVimPlugin {
     name = "ddc-vim";
@@ -74,7 +75,7 @@
   };
   ddc-ui-pum = pkgs.vimUtils.buildVimPlugin {
     name = "ddc-ui-pum";
-    src = pkgs.fetchFromGitHub { 
+    src = pkgs.fetchFromGitHub {
       owner = "Shougo";
       repo = "ddc-ui-pum";
       rev = "master";
@@ -90,7 +91,8 @@
       sha256 = "bovYwcTjWXkvscc2p55Cb1pDEOHJPliYz1hsn0fhhiw=";
     };
   };
-in {
+in
+{
   programs.nixvim = {
     extraPlugins = [
       pkgs.vimPlugins.denops-vim

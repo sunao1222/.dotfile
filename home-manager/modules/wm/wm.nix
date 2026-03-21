@@ -1,6 +1,13 @@
-{inputs, username, pkgs, ...}: let
+{
+  inputs,
+  username,
+  pkgs,
+  ...
+}:
+let
   inherit (inputs.niri-scratchpad-flake.packages.${pkgs.system}) niri-scratchpad;
-in {
+in
+{
   imports = [
     inputs.walker.homeManagerModules.default
     # inputs.elephant.homeManagerModules.default
@@ -73,8 +80,8 @@ in {
   };
 
   home.packages = [
-    pkgs.polkit_gnome
     pkgs.nautilus
+    pkgs.polkit_gnome
     niri-scratchpad
   ];
 
@@ -98,16 +105,25 @@ in {
   };
 
   services = {
+    swww = {
+      enable = true;
+      package = inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww;
+    };
+  };
+
+  services = {
     hyprpaper = {
       enable = true;
       settings = {
         preload = [
           "/home/${username}/Pictures/wallpaper/WhiteGlint.jpg"
+          "/home/${username}/Pictures/wallpaper/b-077.jpg"
+          "/home/${username}/Pictures/wallpaper/nix-wallpaper-stripes-logo.png"
         ];
         wallpaper = [
-          "eDP-1, /home/${username}/Pictures/wallpaper/WhiteGlint.jpg"
+          "eDP-1, /home/${username}/Pictures/wallpaper/nix-wallpaper-stripes-logo.png"
           "DP-2, /home/${username}/Pictures/wallpaper/WhiteGlint.jpg"
-          "HDMI-A-1, /home/${username}/Pictures/wallpaper/WhiteGlint.jpg"
+          "HDMI-A-1, /home/${username}/Pictures/wallpaper/nix-wallpaper-stripes-logo.png"
         ];
       };
     };

@@ -51,7 +51,7 @@
     };
     kb_layout = "jp";
   };
-  animation = [ 
+  animation = [
     "windows, 1, 3, default"
   ];
   gesture = [

@@ -1,6 +1,7 @@
 {
   imports = [
     ./plugins/alpha-nvim.nix
+    ./plugins/avante.nix
     ./plugins/comment.nix
     ./plugins/ddc.nix
     ./plugins/highlight-colors.nix
@@ -10,6 +11,7 @@
     ./plugins/lualine.nix
     ./plugins/noice.nix
     ./plugins/nvim-autopairs.nix
+    # ./plugins/nvim-platformio.nix
     ./plugins/nvim-surround.nix
     ./plugins/remote-nvim.nix
     ./plugins/render-markdown.nix

@@ -1,4 +1,5 @@
-{config, pkgs, ...}: {
+{ config, pkgs, ... }:
+{
 
   programs = {
     zsh = {
@@ -10,7 +11,10 @@
       };
       syntaxHighlighting = {
         enable = true;
-        highlighters = [ "pattern" "brackets" ];
+        highlighters = [
+          "pattern"
+          "brackets"
+        ];
         styles = {
           bracket-level-1 = "fg=blue,bold";
           bracket-level-2 = "fg=red,bold";
@@ -21,12 +25,16 @@
           "rm -rf *" = "fg=white,bold,bg=red";
         };
       };
-      
+
       oh-my-zsh = {
         enable = true;
-        plugins = [ "git" "docker" "sudo" ];
+        plugins = [
+          "git"
+          "docker"
+          "sudo"
+        ];
       };
-      
+
       plugins = [
         {
           name = "powerlevel10k";
@@ -57,6 +65,7 @@
       shellAliases = {
         kc = "kubectl";
         tf = "terraform";
+        nix-clean = "sudo nix-collect-garbage --delete-older-than 2d --cores 16 && nix-collect-garbage --delete-older-than 2d --cores 16";
       };
 
       initContent = ''
@@ -68,7 +77,7 @@
         if [[ -r "${config.home.homeDirectory}/.cache/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
           source "${config.home.homeDirectory}/.cache/p10k-instant-prompt-''${(%):-%n}.zsh"
         fi
-        
+
         # Load Powerlevel10k config
         [[ -f ${config.xdg.configHome}/zsh/.p10k.zsh ]] && source ${config.xdg.configHome}/zsh/.p10k.zsh
 

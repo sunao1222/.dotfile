@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 
 {
   i18n = {
@@ -50,7 +50,7 @@
               # パスワード入力時にプリエディットテキストを表示する
               "ShowPreeditForPassword" = "False";
               # ユーザーデータを保存する間隔（分）
-              "AutoSavePeriod"="30";
+              "AutoSavePeriod" = "30";
             };
           };
           addons = {
