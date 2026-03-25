@@ -9,6 +9,7 @@
     ./plugins/lazygit.nix
     ./plugins/lsp.nix
     ./plugins/lualine.nix
+    ./plugins/marp-nvim.nix
     ./plugins/noice.nix
     ./plugins/nvim-autopairs.nix
     # ./plugins/nvim-platformio.nix
