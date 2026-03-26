@@ -3,9 +3,8 @@ local config = wezterm.config_builder()
 
 config.enable_wayland = true
 config.enable_tab_bar = false
-
 config.use_ime = true
--- config.treat_east_asian_ambiguous_width_as_wide = true
+config.show_update_window = false
 
 config.default_prog = { "zsh" }
 
