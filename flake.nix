@@ -82,9 +82,10 @@
           };
           modules = [
             ./nixos/configuration.nix
-            ./nixos/modules/tftpd.nix
             ./nixos/modules/flatpak.nix
             ./nixos/modules/podman.nix
+            ./nixos/modules/tftpd.nix
+            ./nixos/modules/udev.nix
           ];
         };
       };
