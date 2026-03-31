@@ -38,7 +38,7 @@
       inputs.elephant.follows = "elephant";
     };
     elephant = {
-      url = "github:abenz1267/elephant/v2.20.2";
+      url = "github:abenz1267/elephant/v2.20.3";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     awww = {
@@ -83,6 +83,7 @@
           modules = [
             ./nixos/configuration.nix
             ./nixos/modules/flatpak.nix
+            ./nixos/modules/gns3.nix
             ./nixos/modules/podman.nix
             ./nixos/modules/tftpd.nix
             ./nixos/modules/udev.nix
