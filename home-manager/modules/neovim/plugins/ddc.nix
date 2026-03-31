@@ -16,7 +16,7 @@ let
       owner = "Shougo";
       repo = "ddc-source-lsp";
       rev = "master";
-      sha256 = "o+rVRG0cCNiqkloW1m113NhYxIy4caVNrmUNrs23rMA=";
+      sha256 = "oj+L2dy6FpOYv/j0E/tsSD0BfP9qTtWCKwrLZSsCUsc=";
     };
   };
   ddc-source-around = pkgs.vimUtils.buildVimPlugin {
