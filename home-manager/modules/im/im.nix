@@ -77,14 +77,14 @@
             };
             skk = {
               globalSection = {
-                "Rule" = "default";
+                "Rule" = "StickyShift";
                 "PunctuationStyle" = "English";
                 "InitialInputMode" = "Latin";
                 "PageSize" = "7";
                 "Candidate Layout" = "Vertical";
                 "EggLikeNewLine" = "False";
                 "ShowAnnotation" = "True";
-                "CandidateChooseKey" = "Digit (0,1,2,...)";
+                "CandidateChooseKey" = "Qwerty Center Row (a,s,d,...)";
                 "NTriggersToShowCandWin" = "4";
               };
               sections = {
@@ -113,7 +113,23 @@
       };
     };
   };
+
   home.packages = [
     pkgs.skktools
   ];
+
+  xdg.configFile = {
+    "metadata.json" = {
+      source = ./metadata.json;
+      target = "libskk/rules/StickyShift/metadata.json";
+    };
+    "hiragana.json" = {
+      source = ./hiragana.json;
+      target = "libskk/rules/StickyShift/keymap/hiragana.json";
+    };
+    "katakana.json" = {
+      source = ./katakana.json;
+      target = "libskk/rules/StickyShift/keymap/katakana.json";
+    };
+  };
 }
