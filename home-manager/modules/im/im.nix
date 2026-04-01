@@ -78,7 +78,7 @@
             skk = {
               globalSection = {
                 "Rule" = "StickyShift";
-                "PunctuationStyle" = "English";
+                "PunctuationStyle" = "Japanese";
                 "InitialInputMode" = "Latin";
                 "PageSize" = "7";
                 "Candidate Layout" = "Vertical";
