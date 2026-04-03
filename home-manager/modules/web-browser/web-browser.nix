@@ -7,6 +7,31 @@
 
   programs.firefox = {
     enable = true;
+    languagePacks = [
+      "ja"
+      "en-us"
+    ];
+    profiles.default = {
+      name = "default";
+      isDefault = true;
+      settings = {
+        "intl.locale.requested" = "ja,en-US";
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+      };
+      userChrome = ''
+        #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+          opacity: 0;
+          pointer-events: none;
+        }
+        #main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+          visibility: collapse !important;
+        }
+      '';
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        ublock-origin
+        vimium
+      ];
+    };
   };
 
   # programs.chromium = {
