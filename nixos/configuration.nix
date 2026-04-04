@@ -13,8 +13,10 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
     inputs.xremap.nixosModules.default
+    ./hardware-configuration.nix
+    ./modules/audio.nix
+    ./modules/power.nix
   ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -353,33 +355,6 @@
     dedicatedServer.openFirewall = true;
   };
 
-  # sound config
-  services.pulseaudio.enable = false;
-  hardware.alsa.enablePersistence = true;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    package = pkgs.pipewire.override { bluezSupport = true; };
-    extraConfig = {
-      pipewire = {
-        adfust-sample-rate = {
-          "context.properties" = {
-            "default.clock.rate" = 96000;
-            #"default.allowed-rates" = [ 96000 88200 48000 44100 ];
-            "default.allowed-rates" = [ 96000 ];
-            #"default.clock.quantum" = 4096;
-          };
-        };
-      };
-    };
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-    # jack.enable = true;
-    pulse.enable = true;
-  };
-
   xdg = {
     # terminal-exec = {
     #   enable = true;
@@ -469,25 +444,6 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-
-  # power management
-  powerManagement.powertop.enable = true;
-  services = {
-    # tlpと競合する為無効化
-    power-profiles-daemon.enable = false;
-    thermald.enable = true;
-    tlp = {
-      enable = true;
-      settings = {
-        CPU_SCALING_GOVERNOR_ON_AC = "ondemand";
-        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-        PLATFORM_PROFILE_ON_AC = "balanced";
-        PLATFORM_PROFILE_ON_BAT = "low-power";
-        START_CHARGE_THRESH_BAT0 = 0;
-        STOP_CHARGE_THRESH_BAT0 = 0;
-      };
-    };
-  };
 
   programs.nix-ld.enable = true;
 
