@@ -28,6 +28,10 @@
       url = "github:BirdeeHub/nixCats-nvim";
     };
 
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     niri-scratchpad-flake = {
       url = "github:gvolpe/niri-scratchpad";
       inputs.nixpkgs.follows = "nixpkgs-unstable";

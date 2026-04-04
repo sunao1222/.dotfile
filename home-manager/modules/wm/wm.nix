@@ -10,8 +10,19 @@ in
 {
   imports = [
     inputs.walker.homeManagerModules.default
+    inputs.dms.homeModules.dank-material-shell
+    # inputs.dms.homeModules.niri
     # inputs.elephant.homeManagerModules.default
   ];
+
+  programs.dank-material-shell = {
+    enable = true;
+    systemd.enable = true;
+    # niri = {
+    #   enableKeybinds = true;
+    #   enableSpawn = true;
+    # };
+  };
 
   programs.walker = {
     enable = true;
@@ -30,14 +41,14 @@ in
   #   };
   # };
 
-  programs.waybar = {
-    enable = true;
-    systemd = {
-      enable = true;
-    };
-    settings = import ./waybar.nix;
-    style = builtins.readFile ./waybar.css;
-  };
+  # programs.waybar = {
+  #   enable = true;
+  #   systemd = {
+  #     enable = true;
+  #   };
+  #   settings = import ./waybar.nix;
+  #   style = builtins.readFile ./waybar.css;
+  # };
 
   services.swaync = {
     enable = true;
