@@ -10,20 +10,10 @@ in
 {
   imports = [
     inputs.walker.homeManagerModules.default
-    inputs.dms.homeModules.dank-material-shell
-    # inputs.dms.homeModules.niri
     # inputs.elephant.homeManagerModules.default
     ./niri/niri.nix
+    ./dms/dms.nix
   ];
-
-  programs.dank-material-shell = {
-    enable = true;
-    systemd.enable = true;
-    # niri = {
-    #   enableKeybinds = true;
-    #   enableSpawn = true;
-    # };
-  };
 
   programs.walker = {
     enable = true;
@@ -88,13 +78,6 @@ in
     iconTheme = {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
-    };
-  };
-
-  xdg.configFile = {
-    "niriConfig" = {
-      source = ./config.kdl;
-      target = "niri/config.kdl";
     };
   };
 

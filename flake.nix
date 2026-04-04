@@ -72,7 +72,10 @@
     let
       system = "x86_64-linux";
       username = "Iras";
-      overlays = [ inputs.nur.overlays.default ];
+      overlays = [
+        inputs.nur.overlays.default
+        inputs.niri.overlays.niri
+      ];
       pkgs = import inputs.nixpkgs-unstable {
         config.permittedInsecurePackages = [
           "cisco-packet-tracer-8.2.2"
