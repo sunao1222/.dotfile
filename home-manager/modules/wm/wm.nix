@@ -13,6 +13,7 @@ in
     inputs.dms.homeModules.dank-material-shell
     # inputs.dms.homeModules.niri
     # inputs.elephant.homeManagerModules.default
+    ./niri/niri.nix
   ];
 
   programs.dank-material-shell = {
