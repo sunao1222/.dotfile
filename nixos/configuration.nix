@@ -17,6 +17,7 @@
     ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/power.nix
+    ./modules/uwsm.nix
   ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
