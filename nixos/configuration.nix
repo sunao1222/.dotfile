@@ -15,6 +15,7 @@
   imports = [
     ./hardware-configuration.nix
     ./modules/audio.nix
+    ./modules/dbus.nix
     ./modules/power.nix
     ./modules/uwsm.nix
     ./modules/xremap.nix
@@ -366,8 +367,6 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-
-  # programs.dconf.enable = true;
 
   environment.sessionVariables = {
     #   # Waylandを優先
