@@ -16,7 +16,11 @@
     ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/dbus.nix
+    ./modules/flatpak.nix
+    ./modules/podman.nix
     ./modules/power.nix
+    ./modules/tftpd.nix
+    ./modules/udev.nix
     ./modules/uwsm.nix
     ./modules/xremap.nix
   ];
@@ -311,20 +315,8 @@
     };
   };
 
-  # tailscale（VPN）を有効化
-
-  services.tailscale = {
-    enable = true;
-    extraSetFlags = [ "--operator=${username}" ];
-  };
-
   networking.firewall = {
     enable = true;
-    # tailscaleの仮想NICを信頼する
-    # `<Tailscaleのホスト名>:<ポート番号>`のアクセスが可能になる
-    trustedInterfaces = [ "tailscale0" ];
-    allowedUDPPorts = [ config.services.tailscale.port ];
-    checkReversePath = "loose";
   };
 
   programs.steam = {

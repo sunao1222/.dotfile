@@ -97,11 +97,6 @@
           };
           modules = [
             ./nixos/configuration.nix
-            ./nixos/modules/flatpak.nix
-            ./nixos/modules/gns3.nix
-            ./nixos/modules/podman.nix
-            ./nixos/modules/tftpd.nix
-            ./nixos/modules/udev.nix
           ];
         };
       };
