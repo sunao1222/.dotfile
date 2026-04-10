@@ -36,35 +36,36 @@
   };
   programs.home-manager.enable = true;
 
-  home.packages = [
-    pkgs.anytype
-    pkgs.blender
-    pkgs.brightnessctl
-    pkgs.calcurse
-    pkgs.feishin
-    pkgs.freecad-wayland
-    pkgs.gemini-cli
-    pkgs.glide-media-player
-    pkgs.grimblast
-    pkgs.image-roll
-    pkgs.impala
-    pkgs.mpv
-    pkgs.mysql-workbench
-    pkgs.nmgui
-    pkgs.orca-slicer
-    pkgs.pavucontrol
-    pkgs.ranger
-    pkgs.realvnc-vnc-viewer
-    pkgs.remmina
-    pkgs.screen
-    pkgs.slack
-    pkgs.spotify
-    pkgs.termusic
-    pkgs.waydroid-helper
-    pkgs.zathura
-    pkgs.drawio
-    pkgs.kicad
-    pkgs.parsec-bin
+  home.packages = with pkgs; [
+    anytype
+    blender
+    brightnessctl
+    calcurse
+    drawio
+    feishin
+    freecad-wayland
+    gemini-cli
+    glide-media-player
+    grimblast
+    image-roll
+    impala
+    kicad
+    mpv
+    mysql-workbench
+    nmgui
+    orca-slicer
+    parsec-bin
+    pavucontrol
+    picocom
+    ranger
+    realvnc-vnc-viewer
+    remmina
+    screen
+    slack
+    spotify
+    termusic
+    waydroid-helper
+    zathura
   ];
 
   home.sessionVariables = {
