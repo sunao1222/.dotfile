@@ -1,4 +1,33 @@
-{config, username, pkgs, spkgs, ...}: {
+{
+  lib,
+  config,
+  username,
+  pkgs,
+  spkgs,
+  ...
+}:
+{
+  imports = [
+    ./modules/btop/btop.nix
+    ./modules/cursor/cursor.nix
+    ./modules/devOps/devOps.nix
+    ./modules/ghostty/ghostty.nix
+    ./modules/git/git.nix
+    ./modules/im/im.nix
+    ./modules/ncspot/ncspot.nix
+    ./modules/neovim/neovim.nix
+    ./modules/obsidian/obsidian.nix
+    ./modules/opencode/opencode.nix
+    ./modules/prismlauncher/prismlauncher.nix
+    ./modules/ssh/ssh.nix
+    ./modules/taskwarrior/taskwarrior.nix
+    ./modules/web-browser/web-browser.nix
+    ./modules/wezterm/wezterm.nix
+    ./modules/wm/wm.nix
+    ./modules/yazi/yazi.nix
+    ./modules/zsh/zsh.nix
+  ];
+
 
   home = rec {
     inherit username;
