@@ -89,13 +89,6 @@
     };
   };
 
-  programs = {
-    awscli = {
-      enable = true;
-      package = spkgs.awscli;
-    };
-  };
-
   services.mpris-proxy = {
     enable = true;
   };
