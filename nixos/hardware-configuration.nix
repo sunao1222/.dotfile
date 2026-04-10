@@ -28,7 +28,10 @@
     "sdhci_pci"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [
+    "kvm-intel"
+    "xe"
+  ];
   boot.extraModulePackages = [ ];
   # boot.kernelPatches = [ {
   #   name = "LEAudio-config";
