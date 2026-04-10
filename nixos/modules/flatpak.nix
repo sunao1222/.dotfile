@@ -24,8 +24,8 @@
     };
     packages = [
       "com.discordapp.Discord"
-      "org.vinegarhq.Vinegar"
       "com.vba_m.visualboyadvance-m"
+      "org.vinegarhq.Vinegar"
     ];
   };
 }
