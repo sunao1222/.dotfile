@@ -13,11 +13,11 @@
 
 {
   imports = [
-    inputs.xremap.nixosModules.default
     ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/power.nix
     ./modules/uwsm.nix
+    ./modules/xremap.nix
   ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -107,29 +107,6 @@
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocales = [ "ja_JP.UTF-8/UTF-8" ];
-  };
-
-  services.xremap = {
-    enable = true;
-    userName = "${username}";
-    serviceMode = "system";
-    withNiri = true;
-    config = {
-      modmap = [
-        {
-          name = "CapsLock is dead";
-          remap = {
-            CapsLock = "Ctrl_L";
-          };
-        }
-        # {
-        #   name = "Ctrl_L is SUPER";
-        #   remap = {
-        #     Ctrl_L = "Super_R";
-        #   };
-        # }
-      ];
-    };
   };
 
   security.polkit = {
