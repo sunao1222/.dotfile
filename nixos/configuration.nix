@@ -19,6 +19,7 @@
     ./modules/flatpak.nix
     ./modules/podman.nix
     ./modules/power.nix
+    ./modules/tailscale.nix
     ./modules/tftpd.nix
     ./modules/udev.nix
     ./modules/uwsm.nix
