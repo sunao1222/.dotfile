@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
 
   home.packages = with pkgs; [
@@ -14,6 +19,16 @@
     profiles.default = {
       name = "default";
       isDefault = true;
+      search = {
+        default = "4get";
+        engines = {
+          "4get" = {
+            name = "4get";
+            urls = [{ template = "https://4get.hn.sunao1222.net/web?s={searchTerms}"; }];
+            definedAliases = [ "@4" ];
+          };
+        };
+      };
       settings = {
         "intl.locale.requested" = "ja,en-US";
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
