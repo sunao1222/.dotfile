@@ -88,7 +88,7 @@ in
   };
 
   services = {
-    swww = {
+    awww = {
       enable = true;
       package = inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww;
     };
