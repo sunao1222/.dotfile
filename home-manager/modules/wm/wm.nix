@@ -18,17 +18,21 @@ in
   programs.walker = {
     enable = true;
     runAsService = true;
-    # config = {
-    #
-    # };
+    config = {
+
+    };
+    elephant = {
+      config = {
+        providers = {
+          desktopapplications = {
+            launch_prefix = "uwsm-app";
+          };
+        };
+      };
+    };
   };
   # programs.elephant = {
-  #   config = {
-  #     providers = {
-  #       desktopapplications = {
-  #         launch_prefix = "app2unit --";
-  #       };
-  #     };
+  #   enable = true;
   #   };
   # };
 
@@ -64,9 +68,11 @@ in
   };
 
   home.packages = [
-    pkgs.nautilus
-    pkgs.polkit_gnome
     niri-scratchpad
+    pkgs.nautilus
+    # pkgs.polkit_gnome
+    pkgs.valent
+    pkgs.wl-mirror
   ];
 
   gtk = {
