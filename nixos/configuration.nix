@@ -291,7 +291,7 @@
 
   services.llama-cpp = {
     enable = true;
-    model = "/models/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf";
+    model = "/models/gemma-4-E2B-it-Q4_0.gguf";
     extraFlags = [
       "--n-gpu-layers"
       "99"
