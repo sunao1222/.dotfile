@@ -2,6 +2,7 @@
 {
   imports = [
     inputs.dms.homeModules.dank-material-shell
+    inputs.danksearch.homeModules.dsearch
     inputs.dms.homeModules.niri
   ];
 
@@ -14,5 +15,9 @@
       enableKeybinds = true;
       enableSpawn = true;
     };
+  };
+
+  programs.dsearch = {
+    enable = true;
   };
 }

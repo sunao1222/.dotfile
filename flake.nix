@@ -40,6 +40,10 @@
       url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    danksearch = {
+      url = "github:AvengeMedia/danksearch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     niri-scratchpad-flake = {
       url = "github:gvolpe/niri-scratchpad";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
