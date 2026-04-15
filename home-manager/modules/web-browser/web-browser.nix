@@ -30,6 +30,8 @@
         };
       };
       settings = {
+        "browser.startup.homepage" = "https://4get.hn.sunao1222.net";
+        "browser.search.region" = "JP";
         "intl.locale.requested" = "ja,en-US";
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
