@@ -9,32 +9,10 @@ let
 in
 {
   imports = [
-    inputs.walker.homeManagerModules.default
-    # inputs.elephant.homeManagerModules.default
-    ./niri/niri.nix
     ./dms/dms.nix
+    ./niri/niri.nix
+    ./walker/walker.nix
   ];
-
-  programs.walker = {
-    enable = true;
-    runAsService = true;
-    config = {
-
-    };
-    elephant = {
-      config = {
-        providers = {
-          desktopapplications = {
-            launch_prefix = "uwsm-app";
-          };
-        };
-      };
-    };
-  };
-  # programs.elephant = {
-  #   enable = true;
-  #   };
-  # };
 
   # programs.waybar = {
   #   enable = true;
