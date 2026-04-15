@@ -199,16 +199,19 @@
   };
 
   services = {
-    displayManager.sddm = {
+    # displayManager.sddm = {
+    #   enable = true;
+    #   package = spkgs.sddm;
+    #   wayland.enable = true;
+    # };
+    displayManager.gdm = {
       enable = true;
-      wayland.enable = true;
+      wayland = true;
     };
-    #   desktopManager.plasma6.enable = true;
-    #   xserver = {
-    #     enable = true;
-    #     xkb.layout = "us";
-    #     xkb.model = "pc104";
-    #   };
+    xserver = { 
+      xkb.layout = "us";
+      xkb.model = "pc104";
+    };
   };
 
   # Configure keymap in X11
