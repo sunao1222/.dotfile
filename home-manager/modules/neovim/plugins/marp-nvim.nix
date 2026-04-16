@@ -47,7 +47,7 @@ in
         auto_copy_path = true,      -- ファイルパスを自動でクリップボードにコピー
         show_file_size = true,      -- エクスポート後にファイルサイズを表示
         suggest_gitignore = true,   -- *.htmlを.gitignoreに追加するよう提案
-        debug = false,              -- デバッグログを有効化（トラブルシューティングに便利）
+        debug = true,              -- デバッグログを有効化（トラブルシューティングに便利）
         server_mode = false,        -- サーバーモード(-s)またはウォッチモード(--watch)を使用
           html_option = true          -- ウォッチモードで--htmlオプションを使用（デフォルト: true）
       })
