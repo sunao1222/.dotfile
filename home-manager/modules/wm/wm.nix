@@ -47,6 +47,8 @@ in
 
   home.packages = [
     niri-scratchpad
+    # https://wiki.nixos.org/wiki/Secret_Service
+    pkgs.gcr
     pkgs.nautilus
     # pkgs.polkit_gnome
     pkgs.valent
