@@ -89,10 +89,6 @@
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
-  # programs.niri = {
-  #   enable = true;
-  # };
-
   # programs.regreet = {
   #   enable = true;
   # };
