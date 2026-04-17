@@ -342,6 +342,7 @@ window-rule {
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^ピクチャーインピクチャー$"
     match app-id=r#"pavucontrol$"#
+    match title=r#"Trayscale$"#
     match title=r#"Network Manager$"#
     match app-id=r#"Nautilus$"# title="^Open Files$"
     match app-id=r#"ImageRoll$"#
