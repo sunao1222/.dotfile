@@ -20,6 +20,7 @@
     ./modules/opencode/opencode.nix
     ./modules/prismlauncher/prismlauncher.nix
     ./modules/ssh/ssh.nix
+    ./modules/trayscale/trayscale.nix
     ./modules/taskwarrior/taskwarrior.nix
     ./modules/web-browser/web-browser.nix
     ./modules/wezterm/wezterm.nix
