@@ -96,6 +96,7 @@
 
   services.udiskie = {
     enable = true;
+    automount = false;
     settings = {
       program_options = {
         file_manager = "${pkgs.yazi}/bin/yazi";
