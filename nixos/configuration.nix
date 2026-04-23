@@ -114,10 +114,10 @@
   # 指紋認証
   services.fprintd = {
     enable = true;
-    # tod = {
-    #   enable = true;
-    #   driver = pkgs.libfprint-2-tod1-goodix;
-    # };
+    tod = {
+      enable = true;
+      driver = pkgs.libfprint-2-tod1-goodix;
+    };
   };
 
   services.tor = {
