@@ -66,6 +66,7 @@
         kc = "kubectl";
         tf = "terraform";
         nix-clean = "sudo nix-collect-garbage --delete-older-than 2d --cores 16 && nix-collect-garbage --delete-older-than 2d --cores 16";
+        con = "picocom -s 'sx -vv' -v 'rx -vv'";
       };
 
       initContent = ''
