@@ -238,7 +238,6 @@
       "wireshark"
     ];
     packages = [
-      pkgs.ciscoPacketTracer8
       # pkgs.discord
       pkgs.remmina
       # pkgs.zoom-us
