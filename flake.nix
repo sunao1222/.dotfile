@@ -81,9 +81,6 @@
         inputs.niri.overlays.niri
       ];
       pkgs = import inputs.nixpkgs-unstable {
-        config.permittedInsecurePackages = [
-          "cisco-packet-tracer-8.2.2"
-        ];
         config.allowUnfree = true;
         inherit system overlays;
       };
