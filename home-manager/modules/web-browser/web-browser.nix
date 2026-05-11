@@ -24,7 +24,7 @@
         engines = {
           "4get" = {
             name = "4get";
-            urls = [{ template = "https://4get.hn.sunao1222.net/web?s={searchTerms}"; }];
+            urls = [{ template = "https://4get.sunao1222.net/web?s={searchTerms}"; }];
             definedAliases = [ "@4" ];
           };
         };
