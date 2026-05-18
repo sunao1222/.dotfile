@@ -20,8 +20,13 @@
       name = "default";
       isDefault = true;
       search = {
-        default = "4get";
+        default = "searxng";
         engines = {
+          "searxng" = {
+            name = "searxng";
+            urls = [{ template = "https://searxng.sunao1222.net/search?q={searchTerms}"; }];
+            definedAliases = [ "@searx" ];
+          };
           "4get" = {
             name = "4get";
             urls = [{ template = "https://4get.sunao1222.net/web?s={searchTerms}"; }];
