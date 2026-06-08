@@ -195,15 +195,13 @@
   };
 
   services = {
-    # displayManager.sddm = {
-    #   enable = true;
-    #   package = spkgs.sddm;
-    #   wayland.enable = true;
-    # };
-    displayManager.gdm = {
+    displayManager.sddm = {
       enable = true;
-      wayland = true;
+      wayland.enable = true;
     };
+    # displayManager.gdm = {
+    #   enable = true;
+    # };
     xserver = { 
       xkb.layout = "us";
       xkb.model = "pc104";
