@@ -8,7 +8,8 @@ config.check_for_updates = false
 
 config.default_prog = { "zsh" }
 
-config.window_background_opacity = 0.95
+-- config.window_background_opacity = 0.95
+config.window_background_opacity = 0.3
 config.text_background_opacity = 1.0
 
 config.font_size = 13.0
