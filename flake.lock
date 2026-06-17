@@ -37,6 +37,26 @@
         "type": "github"
       }
     },
+    "dankcalendar": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1781664195,
+        "narHash": "sha256-LJs0OU6xArB+Gf5elShrLMIcITQ2ekwmkblp5+g5Hf4=",
+        "owner": "AvengeMedia",
+        "repo": "dankcalendar",
+        "rev": "746026cf77a34cafff00723d3c259959a7d6ad51",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "dankcalendar",
+        "type": "github"
+      }
+    },
     "danksearch": {
       "inputs": {
         "nixpkgs": [
@@ -683,6 +703,7 @@
     "root": {
       "inputs": {
         "awww": "awww",
+        "dankcalendar": "dankcalendar",
         "danksearch": "danksearch",
         "dgop": "dgop",
         "dms": "dms",

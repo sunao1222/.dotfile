@@ -3,6 +3,7 @@
   imports = [
     inputs.dms.homeModules.dank-material-shell
     inputs.danksearch.homeModules.dsearch
+    inputs.dankcalendar.homeModules.dank-calendar
     inputs.dms.homeModules.niri
   ];
 
@@ -19,5 +20,9 @@
 
   programs.dsearch = {
     enable = true;
+  };
+  programs.dank-calendar = {
+    enable = true;
+    systemd.enable = true;
   };
 }
