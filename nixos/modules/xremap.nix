@@ -17,12 +17,12 @@
             CapsLock = "Ctrl_L";
           };
         }
-        # {
-        #   name = "Ctrl_L is SUPER";
-        #   remap = {
-        #     Ctrl_L = "Super_R";
-        #   };
-        # }
+        {
+          name = "Ctrl_L is CapsLock";
+          remap = {
+            Ctrl_L = "CapsLock";
+          };
+        }
       ];
     };
   };
