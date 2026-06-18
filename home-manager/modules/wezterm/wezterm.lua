@@ -33,6 +33,11 @@ config.leader = { key = 'Space', mods = 'CTRL|SHIFT' }
 
 config.keys = {
   {
+    key = 'e',
+    mods = 'CTRL|SHIFT',
+    action = act.ActivateCopyMode,
+  },
+  {
     key = 'r',
     mods = 'LEADER',
     action = act.ActivateKeyTable {
