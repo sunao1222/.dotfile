@@ -18,15 +18,7 @@ config.font = wezterm.font("HackGen Console NF", {weight="Regular", stretch="Nor
 
 config.color_scheme = "Tokyo Night Moon"
 
-config.exit_behavior = "CloseOnCleanExit"
-
-config.keys = {
-  {
-    key = "CapsLock",
-    mods = "",
-    action = wezterm.action.SendKey { key = "Control" },
-  },
-}
+config.exit_behavior = 'Close'
 
 -- Show which key table is active in the status area
 wezterm.on('update-right-status', function(window, pane)
