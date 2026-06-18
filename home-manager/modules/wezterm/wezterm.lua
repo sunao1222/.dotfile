@@ -1,4 +1,5 @@
 local wezterm = require "wezterm"
+local act = wezterm.action
 local config = wezterm.config_builder()
 
 config.enable_wayland = true
@@ -24,6 +25,72 @@ config.keys = {
     key = "CapsLock",
     mods = "",
     action = wezterm.action.SendKey { key = "Control" },
+  },
+}
+
+-- Show which key table is active in the status area
+wezterm.on('update-right-status', function(window, pane)
+  local name = window:active_key_table()
+  if name then
+    name = 'TABLE: ' .. name
+  end
+  window:set_right_status(name or '')
+end)
+
+config.leader = { key = 'Space', mods = 'CTRL|SHIFT' }
+
+config.keys = {
+  {
+    key = 'r',
+    mods = 'LEADER',
+    action = act.ActivateKeyTable {
+      name = 'resize_pane',
+      one_shot = false,
+    },
+  },
+  {
+    key = 'a',
+    mods = 'LEADER',
+    action = act.ActivateKeyTable {
+      name = 'activate_pane',
+      timeout_milliseconds = 1000,
+    },
+  },
+  {
+    key = 'c',
+    mods = 'LEADER',
+    action = act.ActivateKeyTable {
+      name = 'create_pane',
+      timeout_milliseconds = 1000,
+    },
+  },
+}
+
+config.key_tables = {
+  resize_pane = {
+    { key = 'h', action = act.AdjustPaneSize { 'Left', 1 } },
+
+    { key = 'l', action = act.AdjustPaneSize { 'Right', 1 } },
+
+    { key = 'k', action = act.AdjustPaneSize { 'Up', 1 } },
+
+    { key = 'j', action = act.AdjustPaneSize { 'Down', 1 } },
+
+    { key = 'Escape', action = 'PopKeyTable' },
+  },
+  activate_pane = {
+    { key = 'h', action = act.ActivatePaneDirection 'Left' },
+
+    { key = 'l', action = act.ActivatePaneDirection 'Right' },
+
+    { key = 'k', action = act.ActivatePaneDirection 'Up' },
+
+    { key = 'j', action = act.ActivatePaneDirection 'Down' },
+  },
+  create_pane = {
+    { key = '\'', action = act.SplitHorizontal { domain = 'CurrentPaneDomain'} },
+
+    { key = '5', action = act.SplitVertical { domain = 'CurrentPaneDomain'} },
   },
 }
 
