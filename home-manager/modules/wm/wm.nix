@@ -23,10 +23,6 @@ in
   #   style = builtins.readFile ./waybar.css;
   # };
 
-  services.swaync = {
-    enable = true;
-  };
-
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
       Description = "polkit-gnome-authentication-agent-1";
