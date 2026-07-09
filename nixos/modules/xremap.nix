@@ -12,15 +12,10 @@
     config = {
       modmap = [
         {
-          name = "CapsLock is dead";
-          remap = {
-            CapsLock = "Ctrl_L";
-          };
-        }
-        {
-          name = "Ctrl_L is CapsLock";
+          name = "Change CapsLock Ctrl_L";
           remap = {
             Ctrl_L = "CapsLock";
+            CapsLock = "Ctrl_L";
           };
         }
       ];
