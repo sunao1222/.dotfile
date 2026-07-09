@@ -42,6 +42,7 @@
     blender
     brightnessctl
     calcurse
+    cisco-packet-tracer_9
     drawio
     feishin
     freecad-wayland
