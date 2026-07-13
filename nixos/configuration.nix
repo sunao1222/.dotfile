@@ -17,6 +17,7 @@
     ./modules/audio.nix
     ./modules/dbus.nix
     ./modules/flatpak.nix
+    ./modules/open-webui.nix
     ./modules/podman.nix
     ./modules/power.nix
     ./modules/tailscale.nix
