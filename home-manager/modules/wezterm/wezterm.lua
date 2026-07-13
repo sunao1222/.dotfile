@@ -61,6 +61,21 @@ config.keys = {
       timeout_milliseconds = 1000,
     },
   },
+  {
+    key = 'Space',
+    mods = 'LEADER|CTRL|SHIFT',
+    action = act.QuickSelect,
+  },
+  {
+    key = '\'',
+    mods = 'LEADER',
+    action = act.SplitHorizontal,
+  },
+  {
+    key = '5',
+    mods = 'LEADER',
+    action = act.SplitVertical,
+  },
 }
 
 config.key_tables = {
