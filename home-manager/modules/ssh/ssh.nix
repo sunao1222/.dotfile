@@ -4,7 +4,7 @@
     ssh = {
       enable = true;
       enableDefaultConfig = false;
-      matchBlocks = {
+      settings= {
         "*" = {
           forwardAgent = true;
           serverAliveInterval = 0;
