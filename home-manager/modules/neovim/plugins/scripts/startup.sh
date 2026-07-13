@@ -13,3 +13,7 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" |
 tte "${optionSet["${RANDOM}" % 4]}" --final-gradient-stops 8A008A 00D1FF FFFFFF --final-gradient-direction vertical
+
+while : ;do
+  sleep 0
+done
