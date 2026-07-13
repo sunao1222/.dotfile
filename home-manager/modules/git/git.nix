@@ -1,48 +1,62 @@
 { pkgs, ... }:
 let
-  codegpt = pkgs.buildGoModule {
+  codegpt = pkgs.buildGoModule rec {
     pname = "codegpt";
     version = "1.2.1";
 
     src = pkgs.fetchFromGitHub {
       owner = "appleboy";
       repo = "CodeGPT";
-      tag = "v1.2.1";
+      tag = "v${version}";
       hash = "sha256-Q89CTNbLp0QXaiOubCRAPM7RqMwVJkIAKy3Nr4S5GYc=";
     };
 
-    nativeBuildInputs = [ pkgs.git ];
+    nativeBuildInputs = [
+      pkgs.git
+    ];
 
     vendorHash = "sha256-sihfhavfPoha8tiiV7+icPYEZkp7ZRx1wgJCYiQvJeI=";
   };
-  czg = pkgs.stdenv.mkDerivation (finalAttrs: {
+
+  czg = pkgs.stdenv.mkDerivation rec {
     pname = "czg";
-    version = "1.12.0";
+    version = "1.13.1";
 
     src = pkgs.fetchFromGitHub {
       owner = "Zhengqbbb";
       repo = "cz-git";
-      tag = "v1.12.0";
-      hash = "sha256-8qYZ9Dc35AsfW4k6c0JNap2G9uLBY8Uw/TXqzo9GnoI=";
+      tag = "v${version}";
+      hash = "sha256-h9osG6cs7T1GxC9r8SWAJKbKYIWd06ZdeNJhSS5dkks=";
     };
 
     nativeBuildInputs = [
       pkgs.nodejs
       pkgs.pnpm.configHook
+      pkgs.pnpm
+    ];
+    
+    buildInputs = [
+      pkgs.nodejs
     ];
 
     pnpmDeps = pkgs.pnpm.fetchDeps {
-      inherit (finalAttrs) pname version src;
-      # sourceRoot = "${finalAttrs.src.name}/packages/cli";
-      fetcherVersion = 2;
-      hash = "sha256-wdXuKjsx3rAiftOHCYvpl3uQDFrJwAyzTm0t+30UeLM=";
+      inherit pname version src;
+      fetcherVersion = 4;
+      hash = "sha256-JHNb/7xBB1mKDIyFMEnkNxsvoiIvT4ePqJIq7JsTXtk=";
     };
-    # pnpmRoot = "cli";
+
+    buildPhase = ''
+      runHook preBuild
+      pnpm build
+      runHook postBuild
+    '';
 
     installPhase = ''
-      mkdir $out
+      mkdir -p $out/bin
+      cp ./packages/cli/bin/index.js $out/bin/czg
+      cp -r ./packages/cli/lib $out
     '';
-  });
+  };
 in
 {
 
