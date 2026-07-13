@@ -287,14 +287,23 @@
 
   services.llama-cpp = {
     enable = true;
-    model = "/models/gemma-4-E2B-it-Q4_0.gguf";
-    extraFlags = [
-      "--n-gpu-layers"
-      "99"
-      "--jinja"
-    ];
-    port = 8081;
     package = pkgs.llama-cpp.override { vulkanSupport = true; };
+    settings = {
+      hf-repo = "unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL";
+      port = 8081;
+      spec-type = "draft-mtp";
+      spec-draft-n-max = 2;
+      top-p = 0.95;
+      top-k = 64;
+      chat-template-kwargs = "\'{\"enable_thinking\":false}\'";
+      jinja = true;
+    };
+  };
+  systemd.services.llama-cpp = {
+    environment = {
+      XDG_CACHE_HOME = "/var/cache/llama-cpp";
+      MESA_SHADER_CACHE_DIR = "/var/cache/llama-cpp";
+    };
   };
 
   virtualisation = {
