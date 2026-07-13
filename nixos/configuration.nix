@@ -16,6 +16,7 @@
     ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/dbus.nix
+    ./modules/dms-greeter.nix
     ./modules/flatpak.nix
     ./modules/open-webui.nix
     ./modules/podman.nix
