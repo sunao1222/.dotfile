@@ -1,6 +1,5 @@
 { pkgs, spkgs, ... }:
 let
-
   ddc-vim = pkgs.vimUtils.buildVimPlugin {
     name = "ddc-vim";
     src = pkgs.fetchFromGitHub {
@@ -16,7 +15,7 @@ let
       owner = "Shougo";
       repo = "ddc-source-lsp";
       rev = "master";
-      hash = "sha256-2JVCuFXc6mtXUDEB1lVgWC2q38kvwr9tyjKO/Z4iY9k=";
+      hash = "sha256-a8qc4CR0ZMstGVw+CfF/t0n+CSIJmsg8wII6CaZt4p8=";
     };
   };
   ddc-source-around = pkgs.vimUtils.buildVimPlugin {
