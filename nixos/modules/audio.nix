@@ -9,14 +9,21 @@
     package = pkgs.pipewire.override { bluezSupport = true; };
     extraConfig = {
       pipewire = {
-        adfust-sample-rate = {
+        "99-hires.conf" = {
           "context.properties" = {
             "default.clock.rate" = 96000;
-            # "default.clock.rate" = 48000;
-            #"default.allowed-rates" = [ 96000 88200 48000 44100 ];
-            "default.allowed-rates" = [ 96000 ];
-            # "default.allowed-rates" = [ 48000 ];
-            #"default.clock.quantum" = 4096;
+            "default.clock.allowed-rates" = [ 96000 ];
+            "default.clock.quantum" = 4096;
+          };
+        };
+      };
+      };
+    wireplumber = {
+      enable = true;
+      extraConfig = {
+        bluetoothEnhancements = {
+          "monitor.bluez.properties" = {
+            "bluez5.default.rate" = 96000;
           };
         };
       };

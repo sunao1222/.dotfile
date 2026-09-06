@@ -38,10 +38,9 @@
       powerOnBoot = true;
       settings = {
         General = {
-          ControllerMode = "le";
-          Experimental = true;
-          # KernelExperimental = true;
-          KernelExperimental = "6fbaf188-05e0-496a-9885-d6ddfdb4e03e";
+          # ControllerMode = "le";
+          # Experimental = true;
+          # KernelExperimental = "6fbaf188-05e0-496a-9885-d6ddfdb4e03e";
         };
       };
     };
