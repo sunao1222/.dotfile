@@ -793,6 +793,7 @@
         "nur": "nur",
         "walker": "walker",
         "wezterm": "wezterm",
+        "wrappers": "wrappers",
         "xremap": "xremap"
       }
     },
@@ -981,6 +982,26 @@
         "dir": "nix",
         "owner": "wezterm",
         "repo": "wezterm",
+        "type": "github"
+      }
+    },
+    "wrappers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788981141,
+        "narHash": "sha256-7xWS16u13YGlRNKWaAPzRbEyh4OLOXJe31k7h4AnXNU=",
+        "owner": "nix-community",
+        "repo": "nix-wrapper-modules",
+        "rev": "1db3c116a6aa61823f8d8f3c47c306846428fc54",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-wrapper-modules",
         "type": "github"
       }
     },
