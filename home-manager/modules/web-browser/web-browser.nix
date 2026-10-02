@@ -20,7 +20,7 @@
       name = "default";
       isDefault = true;
       search = {
-        default = "searxng";
+        default = "4get";
         engines = {
           "searxng" = {
             name = "searxng";
@@ -35,7 +35,7 @@
         };
       };
       settings = {
-        "browser.startup.homepage" = "https://4get.hn.sunao1222.net";
+        "browser.startup.homepage" = "https://4get.sunao1222.net";
         "browser.search.region" = "JP";
         "intl.locale.requested" = "ja,en-US";
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
