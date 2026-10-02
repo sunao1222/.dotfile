@@ -46,22 +46,6 @@ config.keys = {
     },
   },
   {
-    key = 'a',
-    mods = 'LEADER',
-    action = act.ActivateKeyTable {
-      name = 'activate_pane',
-      timeout_milliseconds = 1000,
-    },
-  },
-  {
-    key = 'c',
-    mods = 'LEADER',
-    action = act.ActivateKeyTable {
-      name = 'create_pane',
-      timeout_milliseconds = 1000,
-    },
-  },
-  {
     key = 'Space',
     mods = 'LEADER|CTRL|SHIFT',
     action = act.QuickSelect,
@@ -76,6 +60,22 @@ config.keys = {
     mods = 'LEADER',
     action = act.SplitVertical,
   },
+  { key = 'h',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Left'
+  },
+  { key = 'l',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Right'
+  },
+  { key = 'k',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Up'
+  },
+  { key = 'j',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Down'
+  }
 }
 
 config.key_tables = {
@@ -89,20 +89,6 @@ config.key_tables = {
     { key = 'j', action = act.AdjustPaneSize { 'Down', 1 } },
 
     { key = 'Escape', action = 'PopKeyTable' },
-  },
-  activate_pane = {
-    { key = 'h', action = act.ActivatePaneDirection 'Left' },
-
-    { key = 'l', action = act.ActivatePaneDirection 'Right' },
-
-    { key = 'k', action = act.ActivatePaneDirection 'Up' },
-
-    { key = 'j', action = act.ActivatePaneDirection 'Down' },
-  },
-  create_pane = {
-    { key = '\'', action = act.SplitHorizontal { domain = 'CurrentPaneDomain'} },
-
-    { key = '5', action = act.SplitVertical { domain = 'CurrentPaneDomain'} },
   },
 }
 
