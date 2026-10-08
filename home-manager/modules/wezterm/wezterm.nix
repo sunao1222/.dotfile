@@ -1,10 +1,15 @@
-{ inputs, pkgs, spkgs, ... }:
+{ inputs, pkgs, ... }:
 {
+  imports = [
+    (inputs.wrappers.lib.getInstallModule {
+      name = "wezterm";
+      value = inputs.wrappers.lib.wrapperModules.wezterm;
+    })
+  ];
 
-  programs.wezterm = {
+  wrappers.wezterm = { pkgs, lib, ... }: {
     enable = true;
     package = inputs.wezterm.packages.${pkgs.system}.default;
-    enableZshIntegration = true;
-    extraConfig = builtins.readFile ./wezterm.lua;
+    "wezterm.lua".path = ./wezterm.lua;
   };
 }
