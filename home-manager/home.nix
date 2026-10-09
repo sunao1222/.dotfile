@@ -67,6 +67,7 @@
     spotify
     termusic
     waydroid-helper
+    winboat
     zathura
   ];
 
