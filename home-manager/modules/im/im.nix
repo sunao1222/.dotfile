@@ -18,6 +18,9 @@
               "DefaultIM" = "skk";
             };
             "Groups/0/Items/0" = {
+              "Name" = "keyboard-us";
+            };
+            "Groups/0/Items/1" = {
               "Name" = "skk";
             };
           };
@@ -82,7 +85,7 @@
                 "InitialInputMode" = "Latin";
                 "PageSize" = "7";
                 "Candidate Layout" = "Vertical";
-                "EggLikeNewLine" = "False";
+                "EggLikeNewLine" = "True";
                 "ShowAnnotation" = "True";
                 "CandidateChooseKey" = "Qwerty Center Row (a,s,d,...)";
                 "NTriggersToShowCandWin" = "4";
