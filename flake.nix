@@ -28,8 +28,35 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    nixcats = {
-      url = "github:BirdeeHub/nixCats-nvim";
+
+    opencode = {
+      url = "github:anomalyco/opencode/pull/55494/head";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    openchamber = {
+      url = "github:openchamber/openchamber/pull/5154/head";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.opencode.follows = "opencode";
+    };
+    agent-skills = {
+      url = "github:Kyure-A/agent-skills-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    i-have-adhd = {
+      url = "github:ayghri/i-have-adhd";
+      flake = false;
+    };
+    my-skills = {
+      url = "github:sunao1222/agent-skills";
+      flake = false;
+    };
+    awesome-copilot = {
+      url = "github:github/awesome-copilot";
+      flake = false;
+    };
+    anthropic-skills = {
+      url = "github:anthropics/skills";
+      flake = false;
     };
 
     niri = {
