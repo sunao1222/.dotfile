@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, lib, pkgs, ... }:
 {
   imports = [
     (inputs.wrappers.lib.getInstallModule {
@@ -7,8 +7,9 @@
     })
   ];
 
-  wrappers.opencode = { lib, ... }: {
+  wrappers.opencode = { ... }: {
     enable = true;
+    package = inputs.opencode.packages.${pkgs.system}.default;
     settings = lib.importJSON ./opencode.json;
     tui-settings = lib.importJSON ./tui.json;
   };
