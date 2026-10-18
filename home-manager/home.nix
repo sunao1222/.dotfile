@@ -8,6 +8,7 @@
 }:
 {
   imports = [
+    ./modules/agent-skills/agent-skills.nix
     ./modules/btop/btop.nix
     ./modules/cursor/cursor.nix
     ./modules/devOps/devOps.nix
@@ -17,11 +18,13 @@
     ./modules/ncspot/ncspot.nix
     ./modules/neovim/neovim.nix
     ./modules/obsidian/obsidian.nix
+    ./modules/openchamber/openchamber.nix
     ./modules/opencode/opencode.nix
     ./modules/prismlauncher/prismlauncher.nix
+    # ./modules/rpi-imager/rpi-imager.nix
     ./modules/ssh/ssh.nix
-    ./modules/trayscale/trayscale.nix
     ./modules/taskwarrior/taskwarrior.nix
+    ./modules/trayscale/trayscale.nix
     ./modules/web-browser/web-browser.nix
     ./modules/wezterm/wezterm.nix
     ./modules/wm/wm.nix
@@ -38,11 +41,13 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    # rpi-imager
     anytype
     blender
     brightnessctl
     calcurse
     cisco-packet-tracer_9
+    davinci-resolve
     drawio
     feishin
     freecad-wayland
@@ -53,14 +58,12 @@
     impala
     kicad
     mpv
-    mysql-workbench
     nmgui
     orca-slicer
     parsec-bin
     pavucontrol
     picocom
     ranger
-    realvnc-vnc-viewer
     remmina
     screen
     slack
@@ -85,9 +88,6 @@
 
   programs = {
     cava = {
-      enable = true;
-    };
-    cavalier = {
       enable = true;
     };
   };
