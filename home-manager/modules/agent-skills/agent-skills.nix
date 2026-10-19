@@ -7,6 +7,7 @@
   programs.agent-skills = {
     enable = true;
     targets.opencode.enable = true;
+    targets.pi.enable = true;
     sources.i-have-adhd = {
       input = "i-have-adhd";
       subdir = "skills";
