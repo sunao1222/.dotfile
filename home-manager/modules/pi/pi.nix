@@ -1,6 +1,10 @@
 { inputs, pkgs, ... }:
+
 {
-  home.packages = [
-    inputs.pi.packages.${pkgs.system}.default
-  ];
+  programs.pi-coding-agent = {
+    enable = true;
+    package = inputs.pi.packages.${pkgs.system}.default;
+
+    # context = "./AGENTS.md";
+  };
 }
