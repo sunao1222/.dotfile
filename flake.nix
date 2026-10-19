@@ -29,6 +29,10 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
+    pi = {
+      url = "github:earendil-works/pi";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     opencode = {
       url = "github:anomalyco/opencode/pull/55494/head";
       inputs.nixpkgs.follows = "nixpkgs-unstable";

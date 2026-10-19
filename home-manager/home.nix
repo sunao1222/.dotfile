@@ -20,6 +20,7 @@
     ./modules/obsidian/obsidian.nix
     ./modules/openchamber/openchamber.nix
     ./modules/opencode/opencode.nix
+    ./modules/pi/pi.nix
     ./modules/prismlauncher/prismlauncher.nix
     # ./modules/rpi-imager/rpi-imager.nix
     ./modules/ssh/ssh.nix
