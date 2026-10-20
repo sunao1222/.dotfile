@@ -17,25 +17,28 @@
       subdir = "skills";
       idPrefix = "my-skills";
     };
-    sources.awesome-copilot = {
-      input = "awesome-copilot";
-      subdir = "skills";
-      idPrefix = "awesome-copilot";
-    };
     sources.anthropic = {
       input = "anthropic-skills";
       subdir = "skills";
       idPrefix = "anthropic";
     };
+    sources.awesome-copilot = {
+      input = "awesome-copilot";
+      subdir = "skills";
+      idPrefix = "awesome-copilot";
+    };
     skills.enable = [
       "my-skills/nix-development"
+      "anthropic/frontend-design"
+      "anthropic/skill-creator"
+      "anthropic/theme-factory"
+      "anthropic/webapp-testing"
       "awesome-copilot/gh-attach"
       "awesome-copilot/git-commit"
       "awesome-copilot/git-flow-branch-creator"
       "awesome-copilot/refactor"
+      "awesome-copilot/review-and-refactor"
       "awesome-copilot/security-review"
-      "anthropic/skill-creator"
-      "anthropic/webapp-testing"
     ];
   };
 }
