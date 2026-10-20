@@ -18,10 +18,10 @@
               "DefaultIM" = "skk";
             };
             "Groups/0/Items/0" = {
-              "Name" = "keyboard-us";
+              "Name" = "skk";
             };
             "Groups/0/Items/1" = {
-              "Name" = "skk";
+              "Name" = "keyboard-us";
             };
           };
           "globalOptions" = {
