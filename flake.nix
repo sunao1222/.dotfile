@@ -33,6 +33,10 @@
       url = "github:earendil-works/pi";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    oh-my-pi = {
+      url = "github:can1357/oh-my-pi";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     opencode = {
       url = "github:anomalyco/opencode/pull/55494/head";
       inputs.nixpkgs.follows = "nixpkgs-unstable";

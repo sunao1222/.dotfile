@@ -18,6 +18,7 @@
     ./modules/ncspot/ncspot.nix
     ./modules/neovim/neovim.nix
     ./modules/obsidian/obsidian.nix
+    ./modules/omp/omp.nix
     ./modules/openchamber/openchamber.nix
     ./modules/opencode/opencode.nix
     ./modules/pi/pi.nix
