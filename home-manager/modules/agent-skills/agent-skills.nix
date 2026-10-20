@@ -8,6 +8,7 @@
     enable = true;
     targets.opencode.enable = true;
     targets.pi.enable = true;
+    targets.oh-my-pi.enable = true;
     sources.i-have-adhd = {
       input = "i-have-adhd";
       subdir = "skills";

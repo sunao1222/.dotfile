@@ -47,7 +47,7 @@
       inputs.opencode.follows = "opencode";
     };
     agent-skills = {
-      url = "github:Kyure-A/agent-skills-nix";
+      url = "github:sunao1222/agent-skills-nix/?ref=feature/oh-my-pi-skill-target";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     i-have-adhd = {
