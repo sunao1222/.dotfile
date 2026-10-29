@@ -5,8 +5,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "nwiizo";
       repo = "marp.nvim";
-      tag = "v1.2.0";
-      sha256 = "oDdCzRmpgRqX1MoSTff+JSpgQeCjy+uQjl8qm7qpxYw=";
+      tag = "v2.0.1";
+      hash = "sha256-vwlizsaImkLNUA3VgoeyO8ZnvrA/eRdHWLyt8EW6rFE";
     };
   };
 in
