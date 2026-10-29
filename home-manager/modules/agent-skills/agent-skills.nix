@@ -6,17 +6,28 @@
 
   programs.agent-skills = {
     enable = true;
-    targets.opencode.enable = true;
-    targets.pi.enable = true;
-    targets.oh-my-pi.enable = true;
+    targets.agents = {
+      enable = true;
+      flatten = true;
+    };
     sources.i-have-adhd = {
       input = "i-have-adhd";
       subdir = "skills";
+    };
+    sources.laravel = {
+      input = "laravel";
+      subdir = "laravel/skills";
+      idPrefix = "laravel";
     };
     sources.my-skills = {
       input = "my-skills";
       subdir = "skills";
       idPrefix = "my-skills";
+    };
+    sources.agent-toolkit = {
+      input = "agent-toolkit";
+      subdir = "skills";
+      idPrefix = "agent-toolkit";
     };
     sources.anthropic = {
       input = "anthropic-skills";
@@ -30,7 +41,12 @@
     };
     skills.enable = [
       "my-skills/nix-development"
+      "laravel/starter-kit-upgrade"
+      "agent-toolkit/marp-slide"
+      "agent-toolkit/mermaid-diagrams"
       "anthropic/frontend-design"
+      "anthropic/pdf"
+      "anthropic/pptx"
       "anthropic/skill-creator"
       "anthropic/theme-factory"
       "anthropic/webapp-testing"

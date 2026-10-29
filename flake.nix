@@ -46,8 +46,13 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.opencode.follows = "opencode";
     };
+    mcp-server-nix = {
+      url = "github:natsukium/mcp-servers-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     agent-skills = {
       url = "github:sunao1222/agent-skills-nix/?ref=feature/oh-my-pi-skill-target";
+      # url = "github:Kyure-A/agent-skills-nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     i-have-adhd = {
@@ -56,6 +61,14 @@
     };
     my-skills = {
       url = "github:sunao1222/agent-skills";
+      flake = false;
+    };
+    laravel = {
+      url = "github:laravel/agent-skills";
+      flake = false;
+    };
+    agent-toolkit = {
+      url = "github:softaworks/agent-toolkit";
       flake = false;
     };
     awesome-copilot = {
@@ -110,6 +123,11 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
+    mermark-editor = {
+      # url = "github:sunao1222/MerMarkEditor?ref=feature/nix-flake-package";
+      url = "github:Vesperino/MerMarkEditor?ref=v0.8.4";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };

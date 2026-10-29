@@ -8,6 +8,20 @@
   programs.omp = {
     enable = true;
     package = inputs.oh-my-pi.packages.${pkgs.system}.default;
+    settings = {
+      github.enabled = true;
+      statusLine = {
+        preset = "nerd";
+        separator = "powerline";
+      };
+      theme.dark = "dark-tokyo-night";
+      tui.vimMode = true;
+      modelRoles.default = "openai-codex/gpt-6.1-terra";
+      symbolPreset = "nerd";
+      composer.shape = "rule";
+      setupVersion = 2;
+      dev.autoqaConsent = "granted";
+    };
   };
 
   programs.zsh.initContent = builtins.readFile ./omp-completions-zsh.sh;

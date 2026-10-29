@@ -7,17 +7,33 @@
         ]
       },
       "locked": {
-        "lastModified": 1792517211,
-        "narHash": "sha256-139LMIvyy7Jok1YkHuF29lrhq3ksHJEQjS/zR5I32zQ=",
+        "lastModified": 1792776917,
+        "narHash": "sha256-mL4+PYh3WJdZhFPmk6dQEcsIjrl5MPTj7PCIoCMqFpU=",
         "owner": "sunao1222",
         "repo": "agent-skills-nix",
-        "rev": "ffd1a5a9b0f8ad885c7a748c4ed424460b54a001",
+        "rev": "65d578d5302b4a7ebb74e6fb6e2d5c9cf71223ec",
         "type": "github"
       },
       "original": {
         "owner": "sunao1222",
         "ref": "feature/oh-my-pi-skill-target",
         "repo": "agent-skills-nix",
+        "type": "github"
+      }
+    },
+    "agent-toolkit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1772729184,
+        "narHash": "sha256-1q4IP55kvZhJibTLJct0SSifw46lBmAQhp9nSmDzYxs=",
+        "owner": "softaworks",
+        "repo": "agent-toolkit",
+        "rev": "3027f20f3181758385a1bb8c022d4041dfb4de84",
+        "type": "github"
+      },
+      "original": {
+        "owner": "softaworks",
+        "repo": "agent-toolkit",
         "type": "github"
       }
     },
@@ -636,6 +652,22 @@
         "type": "github"
       }
     },
+    "laravel": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792196953,
+        "narHash": "sha256-W/NVyIUfi3fbS6kHnc5uZC3Z5FaTGYqI08anz4cMkws=",
+        "owner": "laravel",
+        "repo": "agent-skills",
+        "rev": "b6e81e5f3c275c145ce4620d3e53a5a480cebd18",
+        "type": "github"
+      },
+      "original": {
+        "owner": "laravel",
+        "repo": "agent-skills",
+        "type": "github"
+      }
+    },
     "libpng": {
       "flake": false,
       "locked": {
@@ -653,14 +685,55 @@
         "type": "github"
       }
     },
+    "mcp-server-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793016202,
+        "narHash": "sha256-8XpdS/HBkaIK5eT2lYzFYWLN8OT+mJQ2c+57s3j/yjE=",
+        "owner": "natsukium",
+        "repo": "mcp-servers-nix",
+        "rev": "c896970f699cc74d6e4e4bcc19d015798d3fed44",
+        "type": "github"
+      },
+      "original": {
+        "owner": "natsukium",
+        "repo": "mcp-servers-nix",
+        "type": "github"
+      }
+    },
+    "mermark-editor": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792973669,
+        "narHash": "sha256-dJQsaLbSFxTGx+qWcMTwDx/+lzmK2axMuFGsvZ4WsRw=",
+        "owner": "Vesperino",
+        "repo": "MerMarkEditor",
+        "rev": "231664ff467609d7ebda116fc218bcd30a4c469a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Vesperino",
+        "ref": "v0.8.4",
+        "repo": "MerMarkEditor",
+        "type": "github"
+      }
+    },
     "my-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1792354154,
-        "narHash": "sha256-huUKBIsaeDDXG8j5X1mhQct8N0i8I8+Gcy1MkPjwajs=",
+        "lastModified": 1792415962,
+        "narHash": "sha256-5p387fspytxbWde+UWXXJ+axc5tvwrp5Dl/mcIL8Ex0=",
         "owner": "sunao1222",
         "repo": "agent-skills",
-        "rev": "31f076b778231f93e87d2045c14896d6487aa670",
+        "rev": "c6e4c0797eb41a482381431d1a36c324e90c1a89",
         "type": "github"
       },
       "original": {
@@ -757,11 +830,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789370898,
-        "narHash": "sha256-QBlvSGth1NfAWw7iePOzFlrz0/pX6CfkFCcPALdySNI=",
+        "lastModified": 1792664215,
+        "narHash": "sha256-89U++Pnz9kb8a5Vdx8xAq9z3V172S7A9Surz8mgjGrM=",
         "owner": "ryoppippi",
         "repo": "nix-bun",
-        "rev": "48e887d7955c1c05b8d4627ed39bafe4bf2455a7",
+        "rev": "0db08e3d1db83272822209ab82f34b399080494e",
         "type": "github"
       },
       "original": {
@@ -997,11 +1070,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1792446620,
-        "narHash": "sha256-khzR2hNgXplctYqgbzQPbf8ZdpjUsTg4Sti3HQSFXSI=",
+        "lastModified": 1793059813,
+        "narHash": "sha256-xDb7zkU80hhO1iC4FgNaAd+LRTF8lBdfk/FhIPhv8lE=",
         "owner": "can1357",
         "repo": "oh-my-pi",
-        "rev": "2220e58146ebe31508e7a216242840d373e082d0",
+        "rev": "d4279540cc41fe51c29c0116e38b7aff6abb20b3",
         "type": "github"
       },
       "original": {
@@ -1079,6 +1152,7 @@
     "root": {
       "inputs": {
         "agent-skills": "agent-skills",
+        "agent-toolkit": "agent-toolkit",
         "anthropic-skills": "anthropic-skills",
         "awesome-copilot": "awesome-copilot",
         "awww": "awww",
@@ -1092,6 +1166,9 @@
         "ghostty": "ghostty",
         "home-manager": "home-manager_2",
         "i-have-adhd": "i-have-adhd",
+        "laravel": "laravel",
+        "mcp-server-nix": "mcp-server-nix",
+        "mermark-editor": "mermark-editor",
         "my-skills": "my-skills",
         "niri": "niri",
         "niri-scratchpad-flake": "niri-scratchpad-flake",

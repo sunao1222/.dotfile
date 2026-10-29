@@ -1,4 +1,5 @@
 {
+  inputs,
   lib,
   config,
   username,
@@ -15,6 +16,7 @@
     ./modules/ghostty/ghostty.nix
     ./modules/git/git.nix
     ./modules/im/im.nix
+    ./modules/mcp-server/mcp-server.nix
     ./modules/ncspot/ncspot.nix
     ./modules/neovim/neovim.nix
     ./modules/obsidian/obsidian.nix
@@ -43,6 +45,7 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    inputs.mermark-editor.packages.${pkgs.system}.default
     # rpi-imager
     anytype
     blender
