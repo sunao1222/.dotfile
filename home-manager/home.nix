@@ -53,6 +53,7 @@
     calcurse
     cisco-packet-tracer_9
     davinci-resolve
+    discord
     drawio
     feishin
     freecad-wayland

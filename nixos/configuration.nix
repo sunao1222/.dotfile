@@ -239,7 +239,6 @@
       "wireshark"
     ];
     packages = [
-      # pkgs.discord
       pkgs.remmina
       # pkgs.zoom-us
       pkgs.gns3-gui

@@ -23,7 +23,6 @@
       };
     };
     packages = [
-      "com.discordapp.Discord"
       "com.vba_m.visualboyadvance-m"
       "org.vinegarhq.Vinegar"
     ];
