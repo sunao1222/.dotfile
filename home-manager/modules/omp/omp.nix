@@ -10,15 +10,12 @@
     package = inputs.oh-my-pi.packages.${pkgs.system}.default;
     settings = {
       github.enabled = true;
-      statusLine = {
-        preset = "nerd";
-        separator = "powerline";
-      };
+      statusLine.preset = "nerd";
       theme.dark = "dark-tokyo-night";
       tui.vimMode = true;
       modelRoles.default = "openai-codex/gpt-6.1-terra";
       symbolPreset = "nerd";
-      composer.shape = "rule";
+      composer.shape = "borderless";
       setupVersion = 2;
       dev.autoqaConsent = "granted";
     };
