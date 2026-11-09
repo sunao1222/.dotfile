@@ -1,10 +1,12 @@
 { ... }:
 {
-  # power management
   powerManagement.powertop.enable = true;
+
   services = {
+
     # tlpと競合する為無効化
     power-profiles-daemon.enable = false;
+
     thermald.enable = true;
     tlp = {
       enable = true;
@@ -15,6 +17,13 @@
         PLATFORM_PROFILE_ON_BAT = "low-power";
         START_CHARGE_THRESH_BAT0 = 0;
         STOP_CHARGE_THRESH_BAT0 = 0;
+      };
+    };
+
+    logind = {
+      enable = true;
+      settings.Login = {
+        HandleLidSwitch  = "suspend";
       };
     };
   };
