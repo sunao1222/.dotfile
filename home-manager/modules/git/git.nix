@@ -99,7 +99,7 @@ in
 
   home.packages = [
     codegpt
-    czg
+    # czg
   ];
 
   home.shellAliases = {
