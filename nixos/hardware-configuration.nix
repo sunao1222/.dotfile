@@ -73,8 +73,10 @@
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     graphics = {
       enable = true;
-      extraPackages = [
-        pkgs.vpl-gpu-rt
+      extraPackages = with pkgs; [
+        intel-media-driver
+        vpl-gpu-rt
+        intel-compute-runtime
       ];
     };
   };
