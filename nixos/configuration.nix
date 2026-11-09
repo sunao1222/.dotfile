@@ -16,7 +16,7 @@
     ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/dbus.nix
-    ./modules/dms-greeter.nix
+    ./modules/dux-greeter.nix
     ./modules/flatpak.nix
     ./modules/llama-cpp.nix
     ./modules/open-webui.nix
@@ -99,6 +99,8 @@
   services.upower = {
     enable = true;
   };
+
+  services.desktopManager.cosmic.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -198,13 +200,20 @@
   };
 
   services = {
-    displayManager.sddm = {
+    displayManager = {
       enable = true;
-      wayland.enable = true;
+      # autoLogin = {
+      #   enable = true;
+      #   user = "Iras";
+      # };
+      # sessionPackages = [
+      #   pkgs.niri-unstable
+      # ];
+      # sddm = {
+      #   enable = true;
+      #   wayland.enable = true;
+      # };
     };
-    # displayManager.gdm = {
-    #   enable = true;
-    # };
     xserver = { 
       xkb.layout = "us";
       xkb.model = "pc104";

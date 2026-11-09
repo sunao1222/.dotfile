@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
 
@@ -81,29 +81,45 @@
     };
 
     niri = {
+      url = "github:niri-wm/niri";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    niri-nix = {
+      url = "git+https://codeberg.org/BANanaD3V/niri-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    niri-flake = {
       # url = "github:sodiboo/niri-flake?rev=6bb99ff875919f03ea6054026619d999061e1170";
       url = "github:epireyn/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     dms = {
-      url = "github:AvengeMedia/DankMaterialShell";
+      url = "github:duxlabs-dev/dux-shell";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    dgop = {
-      url = "github:AvengeMedia/dgop";
+    dms-plugin-registry = {
+      url = "github:duxlabs-dev/dux-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    dank-greeter = {
-      url = "github:AvengeMedia/dank-greeter";
+    dux-gop = {
+      url = "github:duxlabs-dev/dux-gop";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    dux-greeter = {
+      url = "github:duxlabs-dev/dux-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    danksearch = {
-      url = "github:AvengeMedia/danksearch";
+    dux-search = {
+      url = "github:duxlabs-dev/dux-search";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dankcalendar = {
-      url = "github:AvengeMedia/dankcalendar";
+    dux-calendar = {
+      url = "github:duxlabs-dev/dux-calendar?ref=stable-2.0";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    serpantinum = {
+      url = "github:ilyamiro/serpantinum";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     niri-scratchpad-flake = {
       url = "github:gvolpe/niri-scratchpad";
@@ -128,6 +144,10 @@
       url = "github:Vesperino/MerMarkEditor?ref=v0.8.4";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    tiny = {
+      url = "github:sunao1222/tiny?ref=feature/tui-server-channel-groups";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
@@ -144,7 +164,7 @@
       username = "Iras";
       overlays = [
         inputs.nur.overlays.default
-        inputs.niri.overlays.niri
+        inputs.niri-flake.overlays.niri
       ];
       pkgs = import inputs.nixpkgs-unstable {
         config.allowUnfree = true;

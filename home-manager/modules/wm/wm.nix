@@ -2,6 +2,7 @@
   inputs,
   username,
   pkgs,
+  spkgs,
   ...
 }:
 let
@@ -11,6 +12,7 @@ in
   imports = [
     ./dms/dms.nix
     ./niri/niri.nix
+    # ./serpantinum/serpantinum.nix
     ./walker/walker.nix
   ];
 
@@ -22,6 +24,10 @@ in
   #   settings = import ./waybar.nix;
   #   style = builtins.readFile ./waybar.css;
   # };
+
+  programs.rofi = {
+    enable = true;
+  };
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
@@ -44,7 +50,7 @@ in
   home.packages = [
     niri-scratchpad
     # https://wiki.nixos.org/wiki/Secret_Service
-    pkgs.gcr
+    # pkgs.gcr_4
     pkgs.nautilus
     # pkgs.polkit_gnome
     pkgs.valent
@@ -55,7 +61,7 @@ in
     enable = true;
     theme = {
       name = "Tokyonight-Dark";
-      package = pkgs.tokyonight-gtk-theme;
+      package = spkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
       name = "Adwaita";
@@ -66,7 +72,7 @@ in
   services = {
     awww = {
       enable = true;
-      package = inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww;
+      package = inputs.awww.packages.${pkgs.system}.awww;
     };
   };
 
