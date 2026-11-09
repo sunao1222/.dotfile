@@ -249,6 +249,7 @@
   };
 
   environment.systemPackages = [
+    pkgs.rpi-imager
     pkgs.aria2
     pkgs.bluetuith
     pkgs.busybox
@@ -261,7 +262,6 @@
     pkgs.kdePackages.print-manager
     pkgs.libimobiledevice
     # pkgs.rnnoise-plugin
-    pkgs.rpi-imager
     pkgs.virt-manager
     # pkgs.wayland-protocols
     pkgs.wget
