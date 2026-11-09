@@ -22,8 +22,10 @@
     ./modules/open-webui.nix
     ./modules/podman.nix
     ./modules/power.nix
+    ./modules/proxychains.nix
     ./modules/tailscale.nix
     ./modules/tftpd.nix
+    ./modules/tor.nix
     ./modules/udev.nix
     ./modules/uwsm.nix
     ./modules/xremap.nix
@@ -122,14 +124,6 @@
     tod = {
       enable = true;
       driver = pkgs.libfprint-2-tod1-goodix;
-    };
-  };
-
-  services.tor = {
-    enable = true;
-    client.enable = true;
-    settings = {
-      EntryNodes = "hashy10G";
     };
   };
 
@@ -266,7 +260,6 @@
     pkgs.intel-gpu-tools
     pkgs.kdePackages.print-manager
     pkgs.libimobiledevice
-    pkgs.nyx
     # pkgs.rnnoise-plugin
     pkgs.rpi-imager
     pkgs.virt-manager
