@@ -47,7 +47,6 @@
 
   home.packages = with pkgs; [
     inputs.mermark-editor.packages.${pkgs.system}.default
-    # rpi-imager
     anytype
     blender
     brightnessctl
@@ -56,6 +55,7 @@
     davinci-resolve
     discord
     drawio
+    element-desktop
     feishin
     freecad-wayland
     gemini-cli
@@ -66,12 +66,14 @@
     kicad
     mpv
     nmgui
+    notion-electron
     orca-slicer
     parsec-bin
     pavucontrol
     picocom
     ranger
     remmina
+    # rpi-imager
     screen
     slack
     spotify
