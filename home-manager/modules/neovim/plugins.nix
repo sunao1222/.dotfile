@@ -4,6 +4,7 @@
     ./plugins/avante.nix
     ./plugins/comment.nix
     ./plugins/ddc.nix
+    ./plugins/diffview-nvim.nix
     ./plugins/highlight-colors.nix
     ./plugins/indent-blankline.nix
     ./plugins/lazygit.nix
@@ -14,6 +15,7 @@
     ./plugins/nvim-autopairs.nix
     # ./plugins/nvim-platformio.nix
     ./plugins/nvim-surround.nix
+    ./plugins/nvin-tree.nix
     ./plugins/remote-nvim.nix
     ./plugins/render-markdown.nix
     ./plugins/smear-cursor.nix
@@ -22,5 +24,6 @@
     ./plugins/toggleterm.nix
     ./plugins/treesitter.nix
     ./plugins/ts-autotag.nix
+    ./plugins/yazi-nvim.nix
   ];
 }
