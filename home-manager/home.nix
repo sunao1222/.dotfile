@@ -28,6 +28,7 @@
     # ./modules/rpi-imager/rpi-imager.nix
     ./modules/ssh/ssh.nix
     ./modules/taskwarrior/taskwarrior.nix
+    ./modules/tiny/tiny.nix
     ./modules/trayscale/trayscale.nix
     ./modules/web-browser/web-browser.nix
     ./modules/wezterm/wezterm.nix
