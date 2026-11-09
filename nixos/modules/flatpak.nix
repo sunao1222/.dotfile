@@ -25,6 +25,7 @@
     packages = [
       "com.vba_m.visualboyadvance-m"
       "org.vinegarhq.Vinegar"
+      # "website.i2pd.i2pd"
     ];
   };
 }

@@ -399,6 +399,15 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
 
+  services.i2p.enable = true;
+
+  # services.i2pd = {
+  #   enable = true;
+  #   settings = {
+  #     loglevel = "debug";
+  #   };
+  # };
+
   programs.nix-ld.enable = true;
 
   system.stateVersion = "25.11"; # Did you read the comment?
