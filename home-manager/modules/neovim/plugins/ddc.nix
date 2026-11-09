@@ -78,7 +78,7 @@ let
       owner = "Shougo";
       repo = "ddc-ui-pum";
       rev = "master";
-      hash = "sha256-6KRKuovKkYUdtyirZ/UNvtAZzgtVgc+EGVTETq2Hu2U=";
+      hash = "sha256-qSO/muUcBaG1a9JeNF4J211Vdv9wdbrZnvNRVkyjeh4=";
     };
   };
   pum-vim = pkgs.vimUtils.buildVimPlugin {
@@ -90,11 +90,21 @@ let
       hash = "sha256-bovYwcTjWXkvscc2p55Cb1pDEOHJPliYz1hsn0fhhiw=";
     };
   };
+  goda-vim = pkgs.vimUtils.buildVimPlugin {
+    name = "goda-vim";
+    src = pkgs.fetchFromGitHub {
+      owner = "Shougo";
+      repo = "goda.vim";
+      tag = "v0.3.0";
+      hash = "sha256-UIP+2Ie3EzBw/+jwu5S/qpJK+jPBfJumnW3hO1yur90=";
+    };
+  };
 in
 {
   programs.nixvim = {
     extraPlugins = [
       pkgs.vimPlugins.denops-vim
+      goda-vim
       ddc-vim
       ddc-source-lsp
       ddc-source-around
