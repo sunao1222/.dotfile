@@ -12,6 +12,7 @@
     enable = true;
     enableSystemMonitoring = true;
     systemd.enable = true;
+    settings = import ./setting.nix { inherit pkgs; };
     niri = {
       enableKeybinds = true;
     };
