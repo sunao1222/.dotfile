@@ -8,12 +8,12 @@
   pkgs,
   spkgs,
   username,
+  nixosConfigurationName,
   ...
 }:
 
 {
   imports = [
-    ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/dbus.nix
     ./modules/dux-greeter.nix
@@ -21,7 +21,6 @@
     ./modules/llama-cpp.nix
     ./modules/open-webui.nix
     ./modules/podman.nix
-    ./modules/power.nix
     ./modules/proxychains.nix
     ./modules/tailscale.nix
     ./modules/tftpd.nix
@@ -29,7 +28,7 @@
     ./modules/udev.nix
     ./modules/uwsm.nix
     ./modules/xremap.nix
-  ];
+  ] ++ (if nixosConfigurationName == "myNixOS" then [ ./modules/power.nix ] else [ ]);
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

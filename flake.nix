@@ -181,9 +181,22 @@
           inherit system pkgs;
           specialArgs = {
             inherit inputs username spkgs;
+            nixosConfigurationName = "myNixOS";
           };
           modules = [
             ./nixos/configuration.nix
+            ./hosts/thinkbook/hardware-configuration.nix
+          ];
+        };
+        miyo-chan = inputs.nixpkgs-unstable.lib.nixosSystem {
+          inherit system pkgs;
+          specialArgs = {
+            inherit inputs username spkgs;
+            nixosConfigurationName = "miyo-chan";
+          };
+          modules = [
+            ./nixos/configuration.nix
+            ./hosts/miyo-chan/hardware-configuration.nix
           ];
         };
       };
