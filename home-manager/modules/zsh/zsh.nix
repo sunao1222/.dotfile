@@ -57,7 +57,7 @@
             owner = "romkatv";
             repo = "zsh-bench";
             rev = "master";
-            sha256 = "ZoALQoTaKhmEEdGne4obZ+qiUmloCbnjY/VL0q1c6Ok=";
+            sha256 = "dsHGpDTweDqJdLhO/9th2kDt56crfjqkTKBilEi9RaY=";
           };
         }
       ];
