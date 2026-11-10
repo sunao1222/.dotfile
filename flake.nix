@@ -177,7 +177,7 @@
     in
     {
       nixosConfigurations = {
-        myNixOS = inputs.nixpkgs-unstable.lib.nixosSystem {
+        thinkbook = inputs.nixpkgs-unstable.lib.nixosSystem {
           inherit system pkgs;
           specialArgs = {
             inherit inputs username spkgs;
