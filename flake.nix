@@ -161,7 +161,7 @@
     inputs:
     let
       system = "x86_64-linux";
-      username = "Iras";
+      username = "sunao1222";
       overlays = [
         inputs.nur.overlays.default
         inputs.niri-flake.overlays.niri
