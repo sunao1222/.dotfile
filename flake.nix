@@ -181,7 +181,7 @@
           inherit system pkgs;
           specialArgs = {
             inherit inputs username spkgs;
-            nixosConfigurationName = "myNixOS";
+            nixosConfigurationName = "thinkbook";
           };
           modules = [
             ./nixos/configuration.nix
