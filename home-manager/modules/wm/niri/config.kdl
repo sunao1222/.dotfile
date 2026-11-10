@@ -116,6 +116,12 @@ output "HDMI-A-1" {
     position x=-436 y=-1440
 }
 
+output "DP-3" {
+  mode "3840x2160@144"
+  scale 1.5
+  transform "normal"
+  position x=0 y=0
+}
 cursor {
     xcursor-theme "Miku_Cursors"
     xcursor-size 36
