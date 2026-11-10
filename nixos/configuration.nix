@@ -47,7 +47,7 @@
     };
   };
 
-  networking.hostName = "ThinkBook-E14-G7"; # Define your hostname.
+  networking.hostName = "${nixosConfigurationName}"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
