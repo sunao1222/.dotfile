@@ -17,13 +17,13 @@
       enableKeybinds = true;
     };
     plugins = {
-      githubHeatmapPlus.enable = true;
-      audioFx = {
+      githubHeatmapPlus = {
         enable = true;
         settings = {
           username = "sunao1222";
         };
       };
+      audioFx.enable = true;
       chatManager.enable = true;
       dankTranslateAI = {
         enable = true;
