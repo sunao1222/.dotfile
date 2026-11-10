@@ -51,7 +51,6 @@
     blender
     brightnessctl
     calcurse
-    cisco-packet-tracer_9
     davinci-resolve
     discord
     drawio
