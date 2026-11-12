@@ -26,6 +26,8 @@
 
         rust_analyzer = {
           enable = true;
+          installRustc = true;
+          installCargo = true;
         };
 
         html = {
