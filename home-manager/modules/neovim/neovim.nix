@@ -30,6 +30,7 @@
 
   programs.nixvim = {
     enable = true;
+    nixpkgs.source = inputs.nixpkgs-unstable;
     defaultEditor = true;
     viAlias = true;
     vimAlias = false;
