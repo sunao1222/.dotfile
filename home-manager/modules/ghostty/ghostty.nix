@@ -3,7 +3,7 @@
 
   programs.ghostty = {
     enable = true;
-    package = inputs.ghostty.packages.${pkgs.system}.default;
+    package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
     systemd.enable = true;
     enableZshIntegration = true;
     # installVimSyntax = true;

@@ -7,7 +7,7 @@
 
   programs.omp = {
     enable = true;
-    package = inputs.oh-my-pi.packages.${pkgs.system}.default;
+    package = inputs.oh-my-pi.packages.${pkgs.stdenv.hostPlatform.system}.default;
     settings = {
       github.enabled = true;
       statusLine.preset = "nerd";

@@ -9,7 +9,7 @@
 
   wrappers.opencode = { ... }: {
     enable = true;
-    package = inputs.opencode.packages.${pkgs.system}.default;
+    package = inputs.opencode.packages.${pkgs.stdenv.hostPlatform.system}.default;
     settings = lib.importJSON ./opencode.json;
     tui-settings = lib.importJSON ./tui.json;
   };

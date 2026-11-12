@@ -3,7 +3,7 @@
 {
   programs.pi-coding-agent = {
     enable = true;
-    package = inputs.pi.packages.${pkgs.system}.default;
+    package = inputs.pi.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     # context = "./AGENTS.md";
   };

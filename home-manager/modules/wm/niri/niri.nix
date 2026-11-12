@@ -6,7 +6,7 @@
 
   programs.niri = {
     enable = true;
-    package = inputs.niri.packages.${pkgs.system}.default;
+    package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.default;
     config = builtins.readFile ./config.kdl;
     settings = {
       layout.border.enable = true;

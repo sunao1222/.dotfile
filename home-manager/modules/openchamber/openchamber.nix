@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 {
   home.packages = [
-    inputs.openchamber.packages.${pkgs.system}.default
+    inputs.openchamber.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

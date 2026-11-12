@@ -6,7 +6,7 @@
   ...
 }:
 let
-  inherit (inputs.niri-scratchpad-flake.packages.${pkgs.system}) niri-scratchpad;
+  inherit (inputs.niri-scratchpad-flake.packages.${pkgs.stdenv.hostPlatform.system}) niri-scratchpad;
 in
 {
   imports = [
@@ -72,7 +72,7 @@ in
   services = {
     awww = {
       enable = true;
-      package = inputs.awww.packages.${pkgs.system}.awww;
+      package = inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww;
     };
   };
 

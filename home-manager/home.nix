@@ -47,7 +47,7 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    inputs.mermark-editor.packages.${pkgs.system}.default
+    inputs.mermark-editor.packages.${pkgs.stdenv.hostPlatform.system}.default
     anytype
     blender
     brightnessctl
