@@ -24,7 +24,6 @@
         };
       };
       audioFx.enable = true;
-      chatManager.enable = true;
       dankTranslateAI = {
         enable = true;
         settings = {
