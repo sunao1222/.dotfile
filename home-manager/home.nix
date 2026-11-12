@@ -57,7 +57,6 @@
     element-desktop
     feishin
     freecad-wayland
-    gemini-cli
     glide-media-player
     grimblast
     image-roll
