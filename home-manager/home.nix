@@ -13,6 +13,7 @@
     ./modules/btop/btop.nix
     ./modules/cursor/cursor.nix
     ./modules/devOps/devOps.nix
+    ./modules/discord/discord.nix
     ./modules/ghostty/ghostty.nix
     ./modules/git/git.nix
     ./modules/im/im.nix
@@ -52,7 +53,6 @@
     brightnessctl
     calcurse
     davinci-resolve
-    discord
     drawio
     element-desktop
     feishin
