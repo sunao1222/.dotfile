@@ -14,7 +14,7 @@
         settings = {
         providers = {
           desktopapplications = {
-            launch_prefix = "uwsm-app";
+            launch_prefix = "uwsm-app -- ";
           };
         };
       };
