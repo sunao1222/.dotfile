@@ -1,7 +1,7 @@
 {
   imports = [
     ./plugins/alpha-nvim.nix
-    ./plugins/avante.nix
+    # ./plugins/avante.nix
     ./plugins/comment.nix
     ./plugins/ddc.nix
     ./plugins/diffview-nvim.nix
