@@ -264,7 +264,6 @@
     pkgs.virt-manager
     # pkgs.wayland-protocols
     pkgs.wget
-    pkgs.wl-clipboard-rs
     pkgs.xdg-desktop-portal
     pkgs.xdg-desktop-portal-gnome
     pkgs.xwayland-satellite

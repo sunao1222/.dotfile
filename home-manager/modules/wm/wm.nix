@@ -53,6 +53,7 @@ in
     # pkgs.gcr_4
     pkgs.nautilus
     # pkgs.polkit_gnome
+    pkgs.wl-clipboard-rs
     pkgs.valent
     pkgs.wl-mirror
   ];
