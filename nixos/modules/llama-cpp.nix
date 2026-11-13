@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   services.llama-cpp = {
     enable = true;
-    package = pkgs.llama-cpp-vulkan;
+    package = (if config.hardware.nvidia.enabled == true then pkgs.llama-cpp-cuda else pkgs.llama-cpp-vulcan);
       settings = {
       hf-repo = "unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL";
       port = 8081;
