@@ -239,6 +239,22 @@
         "type": "github"
       }
     },
+    "dms-ai-assistant": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794559445,
+        "narHash": "sha256-wUcMOuumRZ9LdH8EHDMrobuu833uf2Ly9yzNmWPaU0w=",
+        "owner": "sunao1222",
+        "repo": "dms-ai-assistant",
+        "rev": "7fe0d642ab693898b162aabac9f80122e3b2d7d0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sunao1222",
+        "repo": "dms-ai-assistant",
+        "type": "github"
+      }
+    },
     "dms-plugin-registry": {
       "inputs": {
         "nixpkgs": [
@@ -1283,6 +1299,7 @@
         "awesome-copilot": "awesome-copilot",
         "awww": "awww",
         "dms": "dms",
+        "dms-ai-assistant": "dms-ai-assistant",
         "dms-plugin-registry": "dms-plugin-registry",
         "dux-calendar": "dux-calendar",
         "dux-gop": "dux-gop",

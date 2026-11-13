@@ -100,6 +100,10 @@
       url = "github:duxlabs-dev/dux-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    dms-ai-assistant = {
+      url = "github:sunao1222/dms-ai-assistant";
+      flake = false;
+    };
     dux-gop = {
       url = "github:duxlabs-dev/dux-gop";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
