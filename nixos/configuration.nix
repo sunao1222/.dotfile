@@ -18,6 +18,7 @@
     ./modules/dbus.nix
     ./modules/dux-greeter.nix
     ./modules/flatpak.nix
+    ./modules/game.nix
     ./modules/llama-cpp.nix
     ./modules/open-webui.nix
     ./modules/podman.nix
