@@ -28,7 +28,7 @@
     ./modules/udev.nix
     ./modules/uwsm.nix
     ./modules/xremap.nix
-  ] ++ (if nixosConfigurationName == "thinkbook" then [ ./modules/power.nix ] else [ ]);
+  ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
