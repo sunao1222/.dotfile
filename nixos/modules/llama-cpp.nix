@@ -2,7 +2,7 @@
 {
   services.llama-cpp = {
     enable = true;
-    package = (if config.hardware.nvidia.enabled == true then pkgs.llama-cpp-cuda else pkgs.llama-cpp-vulcan);
+    package = (if config.hardware.nvidia.enabled == true then pkgs.llama-cpp-cuda else pkgs.llama-cpp-vulkan);
       settings = {
       hf-repo = "unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL";
       port = 8081;
